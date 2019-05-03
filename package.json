@@ -1,12 +1,12 @@
 {
   "name": "productinfolinks",
   "version": "0.0.1",
-  "description": "Manages ProductInfoLinks for plans, including find a provider, SBC's and Benefit Grids",
+  "description": "Base bamapp template to base any new bamapp node on",
   "main": "main.js",
   "scripts": {
     "test": "electron . /page:tests",
     "electron": "electron . /page:index",
-    "browserify": "npx browserify ProductLinkAdmin.js -o dist/bundle.js"
+    "browserify": "npx browserify main.js -o dist/bundle.js"
   },
   "author": "Bryan Apellanes",
   "license": "ISC",

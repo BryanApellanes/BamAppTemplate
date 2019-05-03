@@ -1,11 +1,16 @@
 
 var windowmanager = (function(){    
     return function(app, BrowserWindow){
-        var windows = {};
-        var BrowserWindow = BrowserWindow;
+        var windows = {},
+            pageRoot = './Pages/',
+            app = app,
+            BrowserWindow = BrowserWindow;
     
         return {
             app: app,
+            setPageRoot: function(root){
+                pageRoot = root;
+            },
             start: function(pageName) {
                 return this.createWindow(pageName, 800, 600);
             },
@@ -14,7 +19,7 @@ var windowmanager = (function(){
                     return windows[name];
                 }
                 var win = new BrowserWindow({width: width, height: height});
-                win.loadFile(`./Pages/${name}.html`);
+                win.loadFile(`${pageRoot}${name}.html`);
     
                 win.on('closed', () => {
                     indexWindow = null;
