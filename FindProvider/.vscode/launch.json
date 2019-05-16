@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "name": "Add Links",
+            "program": "${workspaceFolder}/FindADentistLinkManager.js",
+            "args": ["addLinks", "4"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "name": "Check Plan",
+            "program": "${workspaceFolder}/FindADentistLinkManager.js",
+            "args": ["checkPlan", "2JWJQ543678376", "08"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "name": "Check Plans",
+            "program": "${workspaceFolder}/FindADentistLinkManager.js",
+            "args": ["checkPlans", "5", "08"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "name": "Chop Up File",
+            "program": "${workspaceFolder}/chopItUp.js",
+            "args": ["4"]
+        }
+    ]
+}

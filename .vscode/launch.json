@@ -7,10 +7,18 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Ad Hoc Test",
+            "name": "Ad Hoc Test",            
             "program": "${workspaceFolder}/adhoc-test.js",
             "args": ["/monkey:yes", "/bagonias:yellow", "/burp derp"]
-        },
+        },   
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Check find a provider",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/FindProvider/FindADentistLinkManager.main.js",
+            "args": ["checkPlan", "19RBMC43678856", "2019", "08"]
+        },     
         {
             "name": "Debug Electron",
             "type": "node",
