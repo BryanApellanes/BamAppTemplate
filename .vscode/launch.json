@@ -15,9 +15,9 @@
             "type": "node",
             "request": "launch",
             "name": "Check find a provider",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/FindProvider",
             "program": "${workspaceFolder}/FindProvider/FindADentistLinkManager.main.js",
-            "args": ["checkPlan", "19RBMC43678856", "2019", "08"]
+            "args": ["addNotFoundLinks", "1"]
         },     
         {
             "name": "Debug Electron",
@@ -28,7 +28,7 @@
             "windows": {
               "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
             },
-            "args" : [".", "/dev"],
+            "args" : [".", "/page:experimental", "/dev"],
             "outputCapture": "std"
           }
     ]

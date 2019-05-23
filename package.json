@@ -4,9 +4,10 @@
   "description": "Base bamapp template to base any new bamapp node on",
   "main": "main.js",
   "scripts": {
-    "test": "electron . /page:tests",
-    "electron": "electron . /page:index",
-    "browserify": "npx browserify main.js -o dist/bundle.js"
+    "test": "npx browserify Pages/modules/tests.js -o Pages/dist/tests.js && electron . /page:tests /dev",
+    "planlinks": "npx browserify Pages/planlinks.js -o Pages/dist/planlinks.js && electron . /page:planlinks",
+    "experimental": "electron . /page:experimental",
+    "browserify": "npx browserify Pages/Modules/index.js -o dist/index.js"
   },
   "author": "Bryan Apellanes",
   "license": "ISC",
@@ -17,7 +18,8 @@
   },
   "dependencies": {
     "handlebars": "^4.1.2",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.11",
     "metro4": "^4.2.41",
     "xmlhttprequest": "^1.8.0",
     "yaml": "^1.5.0"

@@ -28,22 +28,55 @@ var findADentistLinkManager = (function(){
                 if(_.isUndefined(year) || _.isNaN(year)) {
                     year = '2019';
                 }
-                this.getProductInfoLinks(planId, year, month)
-                .then(data=> {
-                    if(data.links.length == 0){
-                        console.log(`Bad 2019: ${data.planId}`.red);
-                    }else {
-                        console.log(`Good 2019: ${data.planId}`.green);
-                        console.log(JSON.stringify(data.links).green);
-                        _.each(data.links, link => this.logLink(link));
-                    }
-                })
-                .catch(e=> console.log(e));
+                return this.getProductInfoLinks(planId, year, month)
+                    .then(data=> {
+                        if(data.links.length == 0){
+                            console.log(`Bad 2019: ${data.planId}`.red);
+                        }else {
+                            console.log(`Good 2019: ${data.planId}`.green);
+                            console.log(JSON.stringify(data.links).green);
+                            _.each(data.links, link => this.logLink(link));
+                        }
+                    })
+                    .catch(e=> console.log(e));
             },
-            addLink: function(planId, month) {
-                this.addFindADentistLink(planId, "2019", month).then(response => console.log(JSON.stringify(response)));
+            addAllNotFoundLinks: async function(topFileCount){
+                for(var i = 0; i <= topFileCount; i++){
+                    await this.addNotFoundLinks(i);
+                }
             },
-            addLinks: function(fileNum, month){
+            addNotFoundLinks: async function(fileNum) {
+                var notFoundFileDir = './LinkNotFoundPlans/';
+                var files = fs.readdirSync(notFoundFileDir);
+                var done = [];
+                for(var i = 0; i < files.length; i++){
+                    var file = files[i];
+                    if(!done.includes(file) && file.startsWith(`${fileNum}-`)){
+                        console.log(file.bgBlue);
+                        var fileContent = fs.readFileSync(`${notFoundFileDir}${file}`, 'utf8');
+                        var lines = fileContent.split('\n');
+                        for (var i = 0; i < lines.length; i++) {
+                            var line = lines[i].trim();
+                            if(line !== ''){
+                                console.log(line.cyan);
+                                var args = line.split(' ');
+                                await this.addLink(args[0].trim(), args[1].trim(), args[2].trim());
+                            }
+                        }
+                    }                    
+                    done.push(file);
+                }
+            },
+            addLink: async function(planId, year, month) {
+                return this.addFindADentistLink(planId, year, month).then(response => console.log(JSON.stringify(response)));
+            },
+            addAllLinks: async function(fileNum, year) {
+                for(var mo = 1; mo <= 12; mo++){
+                    var month = mo < 10 ? `0${mo}` : mo.toString();
+                    await this.addLinks(fileNum, year, month);
+                }
+            },
+            addLinks: async function(fileNum, year, month){
                 console.log(`doing file number ${fileNum} ${month}`.cyan);
                 var path = require('path');
                 var fullPath = path.resolve(`./DentalPlanIds/DentalPlanIds_${fileNum}.txt`);
@@ -56,15 +89,31 @@ var findADentistLinkManager = (function(){
                     var planId = planIdArray.pop().trim();
                     if(planId !== '') {
                         console.log(planId);
-                        this.addFindADentistLink(planId, "2019", month).then(response=> {
+                        await this.addFindADentistLink(planId, year, month).then(response=> {
                             console.log(JSON.stringify(response));
                             next = true;
                         })
                     }
-                    threading.sleepUntil(500, ()=> next);
+                    threading.sleepUntil(30, ()=> next);
                 }
-            },            
-            checkPlans: function(fileNum, month) {
+            },      
+            checkAllPlans: async function(fromFileNum, toFileNum, year) {
+                if(!year){
+                    year = '2019';
+                }
+                var from = parseInt(fromFileNum);
+                var to = parseInt(toFileNum);
+                for(var i = from; i <= to; i++){
+                    for(var mo = 1; mo <= 12; mo++){
+                        var month = mo < 10 ? `0${mo}` : mo.toString();
+                        console.log(`checking file ${i} for month ${month}`.blue);
+                        await this.checkPlans(i, year, month);
+                        threading.sleep(5000);
+                    }
+                    threading.sleep(5000);
+                }
+            },
+            checkPlans: async function(fileNum, year, month) {
                 var path = require('path');
                 var fullPath = path.resolve(`./DentalPlanIds/DentalPlanIds_${fileNum}.txt`);
                 var planIdsContent = fs.readFileSync(fullPath, 'utf-8');
@@ -76,15 +125,39 @@ var findADentistLinkManager = (function(){
                     var planId = planIds[i].trim();
                     if(planId !== ''){
                         var next = false;
-                        console.log(planId.yellow);
-                        this.getProductInfoLinks(planId, '2019', mo)
+                        console.log(`-- ${planId.bgBlue}`);
+                        await this.getProductInfoLinks(planId, year, mo)
                             .then(data=> {
+                                var color = 'red';
+                                var linkFound = false;
+                                var line = `${data.planId} ${year} ${month}\r\n`;
                                 if(data.links.length == 0){
-                                    console.log(`Bad 2019: ${data.planId}`.red);
-                                }else {
-                                    console.log(`Good 2019: ${data.planId}`.green);
-                                    
+                                    console.log(`fileNum ${fileNum} ${line[color]}`);
+                                }else {                                    
+                                    for(var i = 0; i < data.links.length; i++) {
+                                        var linkInfo = data.links[i];  
+                                        if(linkInfo.subType === 'LINK_FIND_PROVIDER_DENTAL') {
+                                            color= 'green';
+                                            linkFound = true;
+                                            break;
+                                        }
+                                    }
+                                    console.log(`fileNum ${fileNum} ${line[color]}`);
                                     _.each(data.links, link => this.logLink(link));
+                                }
+
+                                if(!linkFound){
+                                    var filePath = `./LinkNotFoundPlans/${fileNum}-${year}-${month}`;
+                                    if(fs.existsSync(filePath)){                                        
+                                        var fileContent = fs.readFileSync(filePath, 'utf8');
+                                        if(!fileContent.includes(line)){
+                                            fs.appendFileSync(filePath, line, 'utf8');
+                                        }else{
+                                            console.log(`already captured ${line}`.yellow);
+                                        }
+                                    } else {
+                                        fs.appendFileSync(filePath, line, 'utf8');
+                                    }
                                 }
                                 next = true;
                             })
@@ -92,7 +165,8 @@ var findADentistLinkManager = (function(){
                                 console.log(e);
                                 next = true;
                             });
-                        threading.sleepUntil(500, () => next);
+                        threading.sleepUntil(750, () => next);
+                        console.log(`-- // ${planId.bgBlue}\r\n\r\n`);
                     }
                 }
             },
@@ -105,7 +179,7 @@ var findADentistLinkManager = (function(){
             test: function(number){
                 var planIds = fs.readSync(`./DentalPlanIds_${number}.csv`)
             },
-            addFindADentistLink: function(planId, effectiveYear, effectiveMonth) {
+            addFindADentistLink: async function(planId, effectiveYear, effectiveMonth) {
                 console.log(`adding planId=${planId}, effectiveYear=${effectiveYear}, effectiveMonth=${effectiveMonth}`);
                 return this.postProductInfoLink(linkInfo, planId, effectiveYear, effectiveMonth);
             },

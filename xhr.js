@@ -1,4 +1,4 @@
-let xhr = (function(){
+var xhr = (function(){
     var _ = _,
         xhrCtor = null;
 
