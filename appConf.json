@@ -1,0 +1,38 @@
+{
+  "Name": "bamapp",
+  "DisplayName": "Bamapp",
+  "ProcessMode": "Dev",
+  "Bindings": [
+    {
+      "HostName": "bamapp",
+      "Port": 8080,
+      "Ssl": false
+    }
+  ],
+  "AppSettings": [],
+  "DefaultLayout": "basic",
+  "DefaultPage": "start",
+  "HtmlDir": "pages",
+  "GenerateDao": true,
+  "CheckDaoHashes": false,
+  "RenderLayoutBody": true,
+  "ServiceSearchPattern": [
+    "*Services.dll",
+    "*Proxyables.dll"
+  ],
+  "ServiceTypeNames": [
+    "Bam.Net.ServiceProxy.Echo, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "Bam.Net.ServiceProxy.EncryptedEcho, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "SchemaInitializers": [],
+  "AppInitializer": null,
+  "AppInitializerAssemblyPath": null,
+  "UserManagerConfig": {
+    "ApplicationName": "UNKNOWN-APPLICATION",
+    "ApplicationNameResolverType": "Bam.Net.Configuration.DefaultConfigurationApplicationNameProvider, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "EmailComposerType": "Bam.Net.Messaging.NamedFormatEmailComposer, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+    "EmailTemplateDirectoryPath": "C:\\bam\\data\\Prod\\AppData\\bamweb\\EmailTemplates",
+    "SmtpSettingsVaultPath": "C:\\bam\\data\\Prod\\AppData\\bamweb\\SmtpSettings.vault.sqlite",
+    "SuppressMessages": false
+  }
+}
