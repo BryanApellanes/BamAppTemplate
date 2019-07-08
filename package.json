@@ -7,7 +7,8 @@
     "test": "npx browserify Pages/modules/tests.js -o Pages/dist/tests.js && electron . /page:tests /dev",
     "planlinks": "npx browserify Pages/planlinks.js -o Pages/dist/planlinks.js && electron . /page:planlinks",
     "experimental": "electron . /page:experimental",
-    "browserify": "npx browserify Pages/Modules/index.js -o dist/index.js"
+    "browserify": "npx browserify Pages/Modules/index.js -o dist/index.js",
+    "testCaseMgmt": "npx browserify Pages/CaseManagement/tests.js -o Pages/dist/CaseManagement/tests.js && electron . /page:CaseManagement/tests /dev"
   },
   "author": "Bryan Apellanes",
   "license": "ISC",

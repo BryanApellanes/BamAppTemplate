@@ -62,3 +62,5 @@ typings/
 
 DocumentLinks
 rates-data-caches
+
+*.tar.gz

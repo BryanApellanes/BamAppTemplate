@@ -30,6 +30,6 @@
             },
             "args" : [".", "/page:experimental", "/dev"],
             "outputCapture": "std"
-          }
+        }
     ]
 }

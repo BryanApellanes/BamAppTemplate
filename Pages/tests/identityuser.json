@@ -1,0 +1,19 @@
+{
+    "id": "539b2d01-8d6d-4885-bd98-772bbc56c675", 
+    "org": "bcbsmn", 
+    "type": "USER", 
+    "email": "eunderwriter-ddRDEkypWv@test.com", 
+    "roles": ["UNDERWRITER"], 
+    "locale": null, 
+    "idpInfo": {
+        "idp": "bcbsmnOkta", 
+        "principal": "o-ddRDEkypWv"
+    }, 
+    "lastName": "Lunderwriter-ddRDEkypWv", 
+    "loginUri": "https://www.youtube.com/watch?v=ZZ5LpwO-An4", 
+    "timezone": null, 
+    "firstName": "Funderwriter-ddRDEkypWv", 
+    "simonInfo": null, 
+    "attributes": null, 
+    "lastAuthDateTime": 1561991145.313000000
+}
