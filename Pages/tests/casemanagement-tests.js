@@ -1,10 +1,9 @@
-const testEnv = "local";
-
 const expect = chai.expect,
     assert = chai.assert,
     should = chai.should(),
     _ = require('lodash'),
-    colors = require('colors');    
+    colors = require('colors')
+    testEnv = 'proj05';    
 
 function msg(txt) {
     console.log(txt);
@@ -102,18 +101,19 @@ function getTestData() { // {planSponsorId: [UUID], agentId: [UUID], application
     return new Promise((resolve, reject) => {
         getTestEntities().then(testEntities => {
 
-            var testApplication = testEntities.applications[randomNumberBetween(0, 12)],
-            testPlanSponsor = testEntities.planSponsors[randomNumberBetween(0, 12)],
-            testAgent = testEntities.agents[randomNumberBetween(0, 12)];
+            getTestApplicationOfType('NEW').then(testApp => {
+                var testApplication = testApp,
+                testPlanSponsor = testEntities.planSponsors[randomNumberBetween(0, 12)],
+                testAgent = testEntities.agents[randomNumberBetween(0, 12)];
 
-            testData = {
-                planSponsorId: entities.getMeta(testPlanSponsor).id,
-                agentId: entities.getMeta(testAgent).id,
-                applicationId: entities.getMeta(testApplication).id
-            }
+                testData = {
+                    planSponsorId: entities.getMeta(testPlanSponsor).id,
+                    agentId: entities.getMeta(testAgent).id,
+                    applicationId: entities.getMeta(testApplication).id
+                }
 
-            resolve(testData);
-
+                resolve(testData);
+            })
         }).catch(reject);
     });
 }
@@ -219,7 +219,7 @@ describe("case management client", function(){
     })
 
     it("should be able to create a new Case", function(done) {
-        var caseMgmt = getCaseManagement("local");
+        var caseMgmt = getCaseManagement(testEnv);
 
         getTestEntities().then(testEntities => {
             var testApplication = testEntities.applications[0],
@@ -245,7 +245,7 @@ describe("case management client", function(){
     }).timeout(10000);
 
     it("should be able to update an existing Case", function(done){
-        var caseMgmt = getCaseManagement("local");
+        var caseMgmt = getCaseManagement(testEnv);
 
         createTestCase(caseMgmt).then(testCase => {
             var meta = entities.getMeta(testCase);
@@ -257,7 +257,7 @@ describe("case management client", function(){
     }).timeout(6000);
 
     it("should be able to create a new Task", function(done){
-        var _caseMgmt = getCaseManagement("proj05");
+        var _caseMgmt = getCaseManagement(testEnv);
 
         createTestCase(_caseMgmt).then(testCase => {
             var caseMeta = entities.getMeta(testCase);
@@ -285,7 +285,7 @@ describe("case management client", function(){
     })
 
     it("should be able to assign a Case", function(done){
-        createTestCaseInEnvironment('proj05').then(testCase => {
+        createTestCaseInEnvironment(testEnv).then(testCase => {
             var caseMeta = entities.getMeta(testCase);
             console.log(" *** assign case test (case meta)");
             console.log(JSON.stringify(caseMeta, null, 2));
@@ -304,31 +304,39 @@ describe("case management client", function(){
     }).timeout(10000);
 
 // User can filter cases by assignee (actor)
-    it("should be able to filter cases by actor", function(done) {
-        var env = 'proj05',
-            _caseMgmt = getCaseManagement(env),
-            testCasePromisess = createThisManyTestCasesInEnvironment(6, env);
+    it("should be able to filter cases by assigned to", function(done) {
+        var _caseMgmt = getCaseManagement(testEnv),
+            testCasePromisess = createThisManyTestCasesInEnvironment(6, testEnv);
 
         Promise.all(testCasePromisess).then(testCases => {
             expect(testCases.length).to.equal(6);            
             // assign one of the cases to a random name
             var testCase = pickFrom(testCases), 
                 caseMeta = entities.getMeta(testCase),
-                testUser = {name: randomString(6)};
+                testUser = {name: randomString(8)};
 
-            //throw new Error("test not fully implemented");
-            //_caseMgmt.assignCase(caseMeta.id, testUser).then()
-            // filter for specified random name
-
-            // assert
-            assert.fail("this test is not fully implemented");
-            done();
+            _caseMgmt.assignCase(caseMeta.id, testUser)
+                .then(taskCase => {
+                    console.log(taskCase);
+                    // filter for specified random name
+                    _caseMgmt.filterCases({'assignedTo/name': testUser.name})
+                        .then(caseResults => {
+                            console.log(caseResults);
+                            expect(caseResults.entities).to.be.an('array');
+                            var firstCase = caseResults.entities[0];
+                            expect(firstCase.assignment).to.be.an('array');
+                            expect(firstCase.assignment[0].assignedTo.name).to.equal(testUser.name);
+                            done();
+                        });                    
+                }).catch((e) => {
+                    assert.fail(e);
+                })            
         })
     }).timeout(10000);
 
 // User can filter cases by type 
     it("should be able to filter cases by type", function(done) {
-        var testCasePromises = createThisManyTestCasesInEnvironment(6, 'proj05');
+        var testCasePromises = createThisManyTestCasesInEnvironment(6, testEnv);
 
         Promise.all(testCasePromises).then(testCases => {
             expect(testCases.length).to.equal(6);
