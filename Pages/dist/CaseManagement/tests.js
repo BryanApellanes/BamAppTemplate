@@ -8801,6 +8801,29 @@ var CaseManagement = (function(){
                     .catch(reject);
             });
         },
+        retrieveCase: (caseId) => {
+            return new Promise((resolve, reject) => {
+                var path = `${getCaseManagementEntityPath("cases")}/${caseId}`;
+                console.log(`retrieveCase: ${path}`);
+                xhr.get(path, getHeaders())
+                    .then(x => {
+                        var result = JSON.parse(x.responseText);
+                        resolve(result);
+                    })
+            });
+        },
+        updateCase: (entity) => {
+            return new Promise((resolve, reject) => {
+                var path = `${getCaseManagementEntityPath("cases")}/${entity.id}`;
+                console.log(`updateCase: ${path}`);
+                xhr.put(entity, getHeaders(), path)
+                    .then(x => {
+                        var result = JSON.parse(x.responseText);
+                        resolve(result);
+                    })
+                    .catch(reject);
+            });
+        },
         assignCase: function(caseId, taskUserInfo){
             return new Promise((resolve, reject) => {
                 var path = `${getCaseManagementEntityPath("cases")}/${caseId}/assignment`;
