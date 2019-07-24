@@ -12,7 +12,7 @@ if(name && title){
     var testSrc = fs.readFileSync('./Templates/Pages/Tools/test.js.hbs', {encoding: 'utf8'});
     var mainTemplate = Handlebars.compile(mainSrc);
     var testTemplate = Handlebars.compile(testSrc);
-    var dir = `./Pages/Tools/${name}/`;
+    var dir = `./Pages/Tools/${name}`;
     var mainHtml = `${dir}/main.html`;
     var mainJs = `${dir}/main.js`;
     var testJs = `${dir}/tests.js`;
@@ -27,7 +27,7 @@ if(name && title){
         fs.writeFileSync(mainHtml, mainContent, 'utf8');
         fs.writeFileSync(mainJs, `// ${name}
 require('./tests.js');
-        `);
+`);
         fs.writeFileSync(readme, `# ${name} ${title}`);
         fs.writeFileSync(testJs, testContent);
     } else {

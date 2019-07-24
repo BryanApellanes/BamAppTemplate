@@ -10,7 +10,7 @@ var force = args['f'];
 if(name && title){
     var source = fs.readFileSync('./Templates/Pages/main.hbs', {encoding: 'utf8'});
     var template = Handlebars.compile(source);
-    var dir = `./Pages/${name}/`;
+    var dir = `./Pages/${name}`;
     var mainHtml = `${dir}/main.html`;
     var mainJs = `${dir}/main.js`;
     var readme = `${dir}/README.md`;
