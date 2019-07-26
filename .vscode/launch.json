@@ -7,10 +7,18 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Ad Hoc Test",
+            "name": "Ad Hoc Test",            
             "program": "${workspaceFolder}/adhoc-test.js",
             "args": ["/monkey:yes", "/bagonias:yellow", "/burp derp"]
-        },
+        },   
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Check find a provider",
+            "cwd": "${workspaceFolder}/FindProvider",
+            "program": "${workspaceFolder}/FindProvider/FindADentistLinkManager.main.js",
+            "args": ["addNotFoundLinks", "1"]
+        },     
         {
             "name": "Debug Electron",
             "type": "node",
@@ -20,8 +28,8 @@
             "windows": {
               "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
             },
-            "args" : [".", "/dev"],
+            "args" : [".", "/page:experimental", "/dev"],
             "outputCapture": "std"
-          }
+        }
     ]
 }

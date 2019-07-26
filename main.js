@@ -14,5 +14,9 @@ app.on('ready', () => {
     if(args["dev"]) {
         windowmanager.openDevTools(page);
     }
+    var names = windowmanager.getWindowNames();
+    for(var i = 0; i < names; i++){
+        console.log(names[i]);
+    }
 })
 
