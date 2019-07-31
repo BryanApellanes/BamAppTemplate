@@ -9042,12 +9042,14 @@ var environments = (function(){
         },
         identityPaths = {
             proj05: "https://quoting-api-proj05.prod.simon365.com/identity/api/v1/service",
-            local: "http://localhost:8080/identity/api/v1/service"
+            local: "http://localhost:8080/identity/api/v1/service",
+            prod: "https://quoting-api.prod.simon365.com/identity/api/vi/service"
         },
         tokenPaths = {
             proj05: "https://quoting-api-proj05.prod.simon365.com/identity/api/test/token?id=bebcad85-6451-406c-a33f-69c829feb930",
             test: "https://quoting-api-test.test.simon365.com/identity/api/test/token?id=bebcad85-6451-406c-a33f-69c829feb930",
             local: "https://quoting-api-proj05.prod.simon365.com/identity/api/test/token?id=bebcad85-6451-406c-a33f-69c829feb930",
+            prod: "https://quoting-api.prod.simon365.com/identity/api/test/token?id=bebcad85-6451-406c-a33f-69c829feb930"
         }
 
         defaultSvcProviderId = '3d9c7c71-4860-496e-8880-bbbe0f830b4d';
