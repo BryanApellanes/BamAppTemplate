@@ -17,7 +17,7 @@ var cliArgs = (function(){
             if(name.startsWith("/")) {
                 name = name.substring(1, name.length);
             }
-            parsedArgs[name] = nameValue[1].replace('_', ' ');
+            parsedArgs[name] = nameValue[1].replace(/_/g, ' ');
         }
     }
 
