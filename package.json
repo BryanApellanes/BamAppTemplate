@@ -14,7 +14,7 @@
   "author": "Bryan Apellanes",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.0",
+    "electron": "^5.0.10",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1"
   },
