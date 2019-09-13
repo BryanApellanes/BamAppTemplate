@@ -1,0 +1,1569 @@
+{
+    "mn/2018/dodge": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Dodge",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/fillmore": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Fillmore",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/freeborn": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Freeborn",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/goodhue": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Goodhue",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/houston": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Houston",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/mower": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Mower",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/olmsted": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Olmsted",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/steele": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Steele",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/wabasha": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Wabasha",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/winona": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Winona",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2018/carlton": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Carlton",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/cook": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Cook",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/itasca": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Itasca",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/koochiching": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Koochiching",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/lake": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Lake",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/lake of the woods": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Lake of the Woods",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/saint louis": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Saint Louis",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2018/blue earth": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Blue Earth",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/faribault": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Faribault",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/waseca": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Waseca",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/le sueur": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Le Sueur",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/martin": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Martin",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/nicollet": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Nicollet",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/rice": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Rice",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/watonwan": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Watonwan",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2018/brown": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Brown",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/cottonwood": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Cottonwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/jackson": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Jackson",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/lincoln": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Lincoln",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/murray": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Murray",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/nobles": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Nobles",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/pipestone": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Pipestone",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/redwood": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Redwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/rock": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Rock",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2018/chippewa": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Chippewa",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/big stone": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Big Stone",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/kandiyohi": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Kandiyohi",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/lac qui parle": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Lac Qui Parle",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/lyon": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Lyon",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/mcleod": {
+      "state": "MN",
+      "year": 2018,
+      "county": "McLeod",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/meeker": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Meeker",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/renville": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Renville",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/sibley": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Sibley",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/swift": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Swift",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/yellow medicine": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Yellow Medicine",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2018/becker": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Becker",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/clay": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Clay",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/douglas": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Douglas",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/grant": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Grant",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/otter tail": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Otter Tail",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/pope": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Pope",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/stevens": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Stevens",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/traverse": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Traverse",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/wilkin": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Wilkin",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2018/aitkin": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Aitkin",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/beltrami": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Beltrami",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/cass": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Cass",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/chisago": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Chisago",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/crow wing": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Crow Wing",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/hubbard": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Hubbard",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/isanti": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Isanti",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/kanabec": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Kanabec",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/mille lacs": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Mille Lacs",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/morrison": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Morrison",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/pine": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Pine",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/roseau": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Roseau",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/todd": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Todd",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/wadena": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Wadena",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2018/anoka": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Anoka",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/benton": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Benton",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/carver": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Carver",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/dakota": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Dakota",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/hennepin": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Hennepin",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/ramsey": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Ramsey",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/scott": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Scott",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/sherburne": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Sherburne",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/stearns": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Stearns",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/washington": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Washington",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/wright": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Wright",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2018/clearwater": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Clearwater",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/kittson": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Kittson",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/mahnomen": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Mahnomen",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/marshall": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Marshall",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/norman": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Norman",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/pennington": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Pennington",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/polk": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Polk",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2018/red lake": {
+      "state": "MN",
+      "year": 2018,
+      "county": "Red Lake",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/dodge": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Dodge",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/fillmore": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Fillmore",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/freeborn": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Freeborn",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/goodhue": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Goodhue",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/houston": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Houston",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/mower": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Mower",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/olmsted": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Olmsted",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/steele": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Steele",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/wabasha": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Wabasha",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/winona": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Winona",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2019/carlton": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Carlton",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/cook": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Cook",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/itasca": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Itasca",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/koochiching": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Koochiching",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/lake": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Lake",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/lake of the woods": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Lake of the Woods",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/saint louis": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Saint Louis",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2019/blue earth": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Blue Earth",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/faribault": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Faribault",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/waseca": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Waseca",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/le sueur": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Le Sueur",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/martin": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Martin",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/nicollet": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Nicollet",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/rice": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Rice",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/watonwan": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Watonwan",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2019/brown": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Brown",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/cottonwood": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Cottonwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/jackson": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Jackson",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/lincoln": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Lincoln",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/murray": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Murray",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/nobles": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Nobles",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/pipestone": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Pipestone",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/redwood": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Redwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/rock": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Rock",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2019/chippewa": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Chippewa",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/big stone": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Big Stone",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/kandiyohi": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Kandiyohi",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/lac qui parle": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Lac Qui Parle",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/lyon": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Lyon",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/mcleod": {
+      "state": "MN",
+      "year": 2019,
+      "county": "McLeod",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/meeker": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Meeker",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/renville": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Renville",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/sibley": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Sibley",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/swift": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Swift",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/yellow medicine": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Yellow Medicine",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2019/becker": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Becker",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/clay": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Clay",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/douglas": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Douglas",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/grant": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Grant",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/otter tail": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Otter Tail",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/pope": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Pope",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/stevens": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Stevens",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/traverse": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Traverse",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/wilkin": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Wilkin",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2019/aitkin": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Aitkin",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/beltrami": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Beltrami",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/cass": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Cass",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/chisago": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Chisago",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/crow wing": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Crow Wing",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/hubbard": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Hubbard",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/isanti": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Isanti",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/kanabec": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Kanabec",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/mille lacs": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Mille Lacs",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/morrison": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Morrison",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/pine": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Pine",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/roseau": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Roseau",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/todd": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Todd",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/wadena": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Wadena",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2019/anoka": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Anoka",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/benton": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Benton",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/carver": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Carver",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/dakota": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Dakota",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/hennepin": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Hennepin",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/ramsey": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Ramsey",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/scott": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Scott",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/sherburne": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Sherburne",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/stearns": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Stearns",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/washington": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Washington",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/wright": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Wright",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2019/clearwater": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Clearwater",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/kittson": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Kittson",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/mahnomen": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Mahnomen",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/marshall": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Marshall",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/norman": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Norman",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/pennington": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Pennington",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/polk": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Polk",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2019/red lake": {
+      "state": "MN",
+      "year": 2019,
+      "county": "Red Lake",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/dodge": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Dodge",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/fillmore": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Fillmore",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/freeborn": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Freeborn",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/goodhue": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Goodhue",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/houston": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Houston",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/mower": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Mower",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/olmsted": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Olmsted",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/steele": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Steele",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/wabasha": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Wabasha",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/winona": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Winona",
+      "ratingArea": "Rating Area 1"
+    },
+    "mn/2020/carlton": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Carlton",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/cook": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Cook",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/itasca": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Itasca",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/koochiching": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Koochiching",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/lake": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Lake",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/lake of the woods": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Lake of the Woods",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/saint louis": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Saint Louis",
+      "ratingArea": "Rating Area 2"
+    },
+    "mn/2020/blue earth": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Blue Earth",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/faribault": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Faribault",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/waseca": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Waseca",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/le sueur": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Le Sueur",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/martin": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Martin",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/nicollet": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Nicollet",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/rice": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Rice",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/watonwan": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Watonwan",
+      "ratingArea": "Rating Area 3"
+    },
+    "mn/2020/brown": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Brown",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/cottonwood": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Cottonwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/jackson": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Jackson",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/lincoln": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Lincoln",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/murray": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Murray",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/nobles": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Nobles",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/pipestone": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Pipestone",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/redwood": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Redwood",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/rock": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Rock",
+      "ratingArea": "Rating Area 4"
+    },
+    "mn/2020/chippewa": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Chippewa",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/big stone": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Big Stone",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/kandiyohi": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Kandiyohi",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/lac qui parle": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Lac Qui Parle",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/lyon": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Lyon",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/mcleod": {
+      "state": "MN",
+      "year": 2020,
+      "county": "McLeod",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/meeker": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Meeker",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/renville": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Renville",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/sibley": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Sibley",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/swift": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Swift",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/yellow medicine": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Yellow Medicine",
+      "ratingArea": "Rating Area 5"
+    },
+    "mn/2020/becker": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Becker",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/clay": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Clay",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/douglas": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Douglas",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/grant": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Grant",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/otter tail": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Otter Tail",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/pope": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Pope",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/stevens": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Stevens",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/traverse": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Traverse",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/wilkin": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Wilkin",
+      "ratingArea": "Rating Area 6"
+    },
+    "mn/2020/aitkin": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Aitkin",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/beltrami": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Beltrami",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/cass": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Cass",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/chisago": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Chisago",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/crow wing": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Crow Wing",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/hubbard": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Hubbard",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/isanti": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Isanti",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/kanabec": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Kanabec",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/mille lacs": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Mille Lacs",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/morrison": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Morrison",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/pine": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Pine",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/roseau": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Roseau",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/todd": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Todd",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/wadena": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Wadena",
+      "ratingArea": "Rating Area 7"
+    },
+    "mn/2020/anoka": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Anoka",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/benton": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Benton",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/carver": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Carver",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/dakota": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Dakota",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/hennepin": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Hennepin",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/ramsey": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Ramsey",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/scott": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Scott",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/sherburne": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Sherburne",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/stearns": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Stearns",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/washington": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Washington",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/wright": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Wright",
+      "ratingArea": "Rating Area 8"
+    },
+    "mn/2020/clearwater": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Clearwater",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/kittson": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Kittson",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/mahnomen": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Mahnomen",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/marshall": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Marshall",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/norman": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Norman",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/pennington": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Pennington",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/polk": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Polk",
+      "ratingArea": "Rating Area 9"
+    },
+    "mn/2020/red lake": {
+      "state": "MN",
+      "year": 2020,
+      "county": "Red Lake",
+      "ratingArea": "Rating Area 9"
+    }
+  }
+  

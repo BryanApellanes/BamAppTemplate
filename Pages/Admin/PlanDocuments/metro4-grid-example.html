@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grid</title>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/mocha@4.0.1/mocha.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="../../css/site.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    </head>
+    <body style="margin: 10px">
+            <h1>Grid</h1>
+            <div class="grid">
+                <div class="row">
+                    <div class="cell"><div>1</div></div>
+                    <div class="cell"><div>2</div></div>
+                    <div class="cell"><div>3</div></div>
+                    <div class="cell"><div>4</div></div>
+                    <div class="cell"><div>5</div></div>
+                    <div class="cell"><div>6</div></div>
+                    <div class="cell"><div>7</div></div>
+                    <div class="cell"><div>8</div></div>
+                    <div class="cell"><div>9</div></div>
+                    <div class="cell"><div>10</div></div>
+                    <div class="cell"><div>11</div></div>
+                    <div class="cell"><div>12</div></div>
+                </div>
+                <div class="row">
+                    <div class="cell-3"><div>cell-3</div></div>
+                    <div class="cell-3"><div>cell-3</div></div>
+                    <div class="cell-3"><div>cell-3</div></div>
+                    <div class="cell-3"><div>cell-3</div></div>
+                </div>
+                <div class="row">
+                    <div class="cell-4 offset-4"><div>cell-4 + offset-4</div></div>
+                </div>
+                <div class="row">
+                    <div class="cell-3"><div>cell-3</div></div>
+                    <div class="cell-6 offset-3"><div>cell-6 + offset-3</div></div>
+                </div>
+                <div class="row">
+                    <div class="cell-4 offset-4"><div>cell-4 + offset-4</div></div>
+                    <div class="cell"><div>1</div></div>
+                    <div class="cell"><div>1</div></div>
+                    <div class="cell"><div>1</div></div>
+                    <div class="cell"><div>1</div></div>
+                </div>
+                <div class="row">
+                    <div class="cell">
+                        <div class="row">
+                            <div class="cell"><div>nested</div></div>
+                            <div class="cell"><div>nested</div></div>
+                            <div class="cell"><div>nested</div></div>
+                            <div class="cell"><div>nested</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script 
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous">
+            </script>        
+            <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+    </body>
+</html>

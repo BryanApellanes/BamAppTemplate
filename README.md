@@ -9,6 +9,27 @@ npm run electron
 
 Running the command above executes the npm script named "electron" defined in the package.json file.
 
+# open-tool.sh
+The open-tool.sh script is a convenience script used to open a page in the `Pages/Tools` folder.  Specify the relative path from the `Pages/Tools` root folder; the script assumes that there is a file named `main.html` in the folder path specified:
+
+```
+./open-tool.sh TOOL_NAME
+```
+
+Specify the `/dev` switch to open the developer console when the tool page is opened.
+
+# new-tool.sh
+The `new-tool.sh` script is used to create a new tool page.  It takes 2 required arguments:
+
+```
+./new-tool.sh /name:<REPLACE_WITH_TOOL_NAME> /title:<REPLACE_WITH_TITLE>
+```
+
+If a tool by the specified name already exists, an error is displayed: `file already exists: ./Pages/Tools/TOOL_NAME/main.html`
+
+A tool page has mocha testing tools baked in.
+
+
 # new-page.sh
 The `new-page.sh` script is used to create a new page.  It takes 2 required arguments:
 
@@ -41,23 +62,3 @@ Specify the `/dev` switch to open the developer console when the page is opened.
 ```
 ./open.sh PAGE_NAME /dev
 ```
-
-# new-tool.sh
-The `new-tool.sh` script is used to create a new tool page.  It takes 2 required arguments:
-
-```
-./new-tool.sh /name:<REPLACE_WITH_TOOL_NAME> /title:<REPLACE_WITH_TITLE>
-```
-
-If a tool by the specified name already exists, an error is displayed: `file already exists: ./Pages/Tools/TOOL_NAME/main.html`
-
-A tool page has mocha testing tools baked in.
-
-# open-tool.sh
-The open-tool.sh script is a convenience script used to open a page in the `Pages/Tools` folder.  Specify the relative path from the `Pages/Tools` root folder; the script assumes that there is a file named `main.html` in the folder path specified:
-
-```
-./open-tool.sh TOOL_NAME
-```
-
-Specify the `/dev` switch to open the developer console when the tool page is opened.

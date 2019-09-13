@@ -8,7 +8,7 @@ var title = args['title'];
 var force = args['f'];
 
 if(name && title){
-    var mainSrc = fs.readFileSync('./Templates/Pages/Tools/main.hbs', {encoding: 'utf8'});
+    var mainSrc = fs.readFileSync('./Templates/Tools/main.hbs', {encoding: 'utf8'});
     var testSrc = fs.readFileSync('./Templates/Pages/Tools/test.js.hbs', {encoding: 'utf8'});
     var mainTemplate = Handlebars.compile(mainSrc);
     var testTemplate = Handlebars.compile(testSrc);

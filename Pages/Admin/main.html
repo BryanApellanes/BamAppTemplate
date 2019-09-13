@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Admin Tools</title>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/mocha@4.0.1/mocha.css" />
+        <link rel="stylesheet" type="text/css" href="../css/site.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />
+    </head>
+    <body style="margin: 10px">
+            <h1>Admin Tools</h1>
+            <div id="main">
+                <ul>
+                    <li><a href="./tests.html">Tests</a></li>
+                    <li><a href="./PlanDocuments/PlanDocuments.html">Plan Documents</a></li>
+                </ul>
+            </div>
+            <!-- -->
+                <div id="holder">
+                Drag your file here
+                </div>
+
+                <script>
+                document.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    for (const f of e.dataTransfer.files) {
+                    console.log('File(s) you dragged here: ', f.path)
+                    }
+                });
+                document.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+                </script>
+            <script 
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous">
+            </script>   
+            <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>     
+            <script src="../dist/Admin/main.bundle.js"></script>
+
+    </body>
+</html>
