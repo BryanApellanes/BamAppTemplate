@@ -5,7 +5,7 @@ var cliArgs = (function(){
         var arg = process.argv[i];
         var nameValue = arg.split(':');
         if(nameValue.length === 1){
-            if(nameValue[0].startsWith("/")){
+            if(nameValue[0].startsWith("/") || nameValue[0].startsWith("-")){
                 var name = nameValue.toString();
                 name = name.substring(1, name.length);
                 parsedArgs[name] = true;
@@ -14,7 +14,7 @@ var cliArgs = (function(){
             }
         } else if(nameValue.length === 2) {
             var name = nameValue[0];
-            if(name.startsWith("/")) {
+            if(name.startsWith("/") || name.startsWith("-")) {
                 name = name.substring(1, name.length);
             }
             parsedArgs[name] = nameValue[1].replace(/_/g, ' ');
