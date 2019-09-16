@@ -6,7 +6,8 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> 
         <link rel="stylesheet" type="text/css" href="../../css/site.css" />
         <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
-        <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+        <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+        <!--<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body style="margin: 10px">
@@ -23,7 +24,29 @@
             <fieldset>
                 <legend>Documents</legend>
             </fieldset>
+            <div id="holder">
+                Drag your file here
+                </div>
 
+                <script>
+                document.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    for (const f of e.dataTransfer.files) {
+                        console.log('File(s) you dragged here: ', f.path);
+                        var txt = '';
+                        for(prop in f){
+                            txt += prop + ": " + f[prop] + "\r\n";
+                        }
+                        console.log(txt);
+                    }
+                });
+                document.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+                </script>
             <script 
                 src="https://code.jquery.com/jquery-3.4.1.js"
                 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="

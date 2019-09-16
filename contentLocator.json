@@ -96,6 +96,10 @@
         {
           "SortOrder": 3,
           "RelativePath": "~/common"
+        },
+        {
+          "SortOrder": 4,
+          "RelativePath": "~/Pages"
         }
       ]
     }

@@ -2,6 +2,15 @@
   "Name": "bamapp",
   "DisplayName": "Bamapp",
   "ProcessMode": "Dev",
+  "ServerConf": {
+    "ServerKind": 1,
+    "Command": "bamweb",
+    "Arguments": [
+      "/S",
+      "/content:/opt/bam/content",
+      "/verbose"
+    ]
+  },
   "Bindings": [
     {
       "HostName": "bamapp",

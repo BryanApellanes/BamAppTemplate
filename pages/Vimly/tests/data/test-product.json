@@ -1,0 +1,53 @@
+[
+    {
+        "serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+        "relationId":"4N3VK5",
+        "planId":"4N3VK543678630",
+        "planName":"Preferred $50/150 Ded $1500 Max 3-Tier Non Metro ",
+        "planDescription":"Preferred",
+        "planDetails":{
+            "grandfatherExpirationDate":null,
+            "ratingArea":"NON METRO",
+            "maxEnrollment":9,
+            "productId":"2129752576",
+            "tier":"THREE",
+            "minParticipation":70,
+            "maxParticipation":100,
+            "links":[
+                {
+                    "id":"ef74a0a8-56ee-3f5b-9752-f77faff3e75c",
+                    "title":"Find A Dentist",
+                    "link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/",
+                    "type":"WEBSITE",
+                    "subType":"LINK_FIND_PROVIDER_DENTAL"
+                },
+                    {
+                        "id":"21bece49-e67c-3fc5-909b-02233a134ff9",
+                        "title":"M00503R03_2019 Small Group Dental Sheet - Preferred_508.pdf",
+                        "link":"s3://quoting.staging.prod.simon365.com/benefits_grid/4N3VK543678630/M00503R03_2019 Small Group Dental Sheet - Preferred_508.pdf",
+                        "type":"DOCUMENT",
+                        "subType":"DOCUMENT_BENEFIT_GRID"
+                    }
+                ],
+                        "region":"MN",
+                        "orthoAmount":null,
+                        "minEnrollment":1
+                        },
+                        "effectiveDate":"2019-08-01",
+                        "expirationDate":"2019-08-31"
+                    },
+                        {
+                            "serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+                            "relationId":"04SAWD",
+                            "planId":"04SAWD43678702",
+                            "planName":"Freedom Enhanced $50/150 Ded $1000 Max 3-Tier Non Metro",
+                            "planDescription":"Freedom",
+                            "planDetails":{
+                                "grandfatherExpirationDate":null,
+                                "ratingArea":"NON METRO",
+                                "maxEnrollment":9,
+                                "productId":"2129755152",
+                                "tier":"THREE",
+                                "minParticipation":70,
+                                "maxParticipation":100,
+                                "links":[{"id":"43a716bd-efec-3e21-b9d7-770fc4349921","title":"Find A Dentist","link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/","type":"WEBSITE","subType":"LINK_FIND_PROVIDER_DENTAL"},{"id":"2b210539-42da-3cf7-9318-f62ed338d85b","title":"M00504R03_2019 Small Group Dental Sheet - Freedom_508.pdf","link":"s3://quoting.staging.prod.simon365.com/benefits_grid/04SAWD43678702/M00504R03_2019 Small Group Dental Sheet - Freedom_508.pdf","type":"DOCUMENT","subType":"DOCUMENT_BENEFIT_GRID"}],"region":"MN","orthoAmount":null,"minEnrollment":1},"effectiveDate":"2019-08-01","expirationDate":"2019-08-31"},{"serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d","relationId":"HDCSOA","planId":"HDCSOA43678990","planName":"Value Standard $0/0 Ded $1000 Max 3-Tier Non Metro","planDescription":"Value","planDetails":{"grandfatherExpirationDate":null,"ratingArea":"NON METRO","maxEnrollment":9,"productId":"2129764238","tier":"THREE","minParticipation":70,"maxParticipation":100,"links":[{"id":"6481b295-4773-3389-9940-e16d46ca827a","title":"M00505R02_2019 Small Group Dental Sheet - Value_508.pdf","link":"s3://quoting.staging.prod.simon365.com/benefits_grid/HDCSOA43678990/M00505R02_2019 Small Group Dental Sheet - Value_508.pdf","type":"DOCUMENT","subType":"DOCUMENT_BENEFIT_GRID"},{"id":"f248a673-43e2-3849-91cd-9dbdfc1bcf19","title":"Find A Dentist","link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/","type":"WEBSITE","subType":"LINK_FIND_PROVIDER_DENTAL"}],"region":"MN","orthoAmount":null,"minEnrollment":1},"effectiveDate":"2019-08-01","expirationDate":"2019-08-31"},{"serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d","relationId":"H2ZOUQ","planId":"H2ZOUQ43678942","planName":"Value Premium $0/0 Ded $1000 Max 3-Tier Non Metro ","planDescription":"Value","planDetails":{"grandfatherExpirationDate":null,"ratingArea":"NON METRO","maxEnrollment":9,"productId":"2129764081","tier":"THREE","minParticipation":70,"maxParticipation":100,"links":[{"id":"7a28d19d-1a0b-3fae-b6c1-18cc8d22c249","title":"M00505R02_2019 Small Group Dental Sheet - Value_508.pdf","link":"s3://quoting.staging.prod.simon365.com/benefits_grid/H2ZOUQ43678942/M00505R02_2019 Small Group Dental Sheet - Value_508.pdf","type":"DOCUMENT","subType":"DOCUMENT_BENEFIT_GRID"},{"id":"59ba4b47-9a1e-3f9f-a8da-e3117b3fa805","title":"Find A Dentist","link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/","type":"WEBSITE","subType":"LINK_FIND_PROVIDER_DENTAL"}],"region":"MN","orthoAmount":null,"minEnrollment":1},"effectiveDate":"2019-08-01","expirationDate":"2019-08-31"},{"serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d","relationId":"O8RBDR","planId":"O8RBDR436781110","planName":"Freedom Enhanced $50/150 Ded $1500 Max 3-Tier Non Metro","planDescription":"Freedom","planDetails":{"grandfatherExpirationDate":null,"ratingArea":"NON METRO","maxEnrollment":9,"productId":"2129788061","tier":"THREE","minParticipation":70,"maxParticipation":100,"links":[{"id":"77913557-1bd4-397b-8bf9-2ddfa98a605a","title":"Find A Dentist","link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/","type":"WEBSITE","subType":"LINK_FIND_PROVIDER_DENTAL"},{"id":"168b44b5-7ce3-3dc6-9e47-396b4c26cc53","title":"M00504R03_2019 Small Group Dental Sheet - Freedom_508.pdf","link":"s3://quoting.staging.prod.simon365.com/benefits_grid/O8RBDR436781110/M00504R03_2019 Small Group Dental Sheet - Freedom_508.pdf","type":"DOCUMENT","subType":"DOCUMENT_BENEFIT_GRID"}],"region":"MN","orthoAmount":null,"minEnrollment":1},"effectiveDate":"2019-08-01","expirationDate":"2019-08-31"},{"serviceProviderId":"3d9c7c71-4860-496e-8880-bbbe0f830b4d","relationId":"URW4ZM","planId":"URW4ZM43678486","planName":"Preferred $50/150 Ded $1000 Max 3-Tier Non Metro ","planDescription":"Preferred","planDetails":{"grandfatherExpirationDate":null,"ratingArea":"NON METRO","maxEnrollment":9,"productId":"2129738901","tier":"THREE","minParticipation":70,"maxParticipation":100,"links":[{"id":"c2072b2a-9769-3b36-a1bd-8c2222da365e","title":"Find A Dentist","link":"https://mn.ourdentalcoverage.com/find-a-dentist/#/","type":"WEBSITE","subType":"LINK_FIND_PROVIDER_DENTAL"},{"id":"bfb30005-a9f2-300c-aafb-e2d54dfb4b7e","title":"M00503R03_2019 Small Group Dental Sheet - Preferred_508.pdf","link":"s3://quoting.staging.prod.simon365.com/benefits_grid/URW4ZM43678486/M00503R03_2019 Small Group Dental Sheet - Preferred_508.pdf","type":"DOCUMENT","subType":"DOCUMENT_BENEFIT_GRID"}],"region":"MN","orthoAmount":null,"minEnrollment":1},"effectiveDate":"2019-08-01","expirationDate":"2019-08-31"}]

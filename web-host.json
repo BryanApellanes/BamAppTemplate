@@ -1,0 +1,8 @@
+{
+  "ProcessId": 7856,
+  "CommandLineArgs": "/Users/bapellanes/src/BamFrameworkCore/BamContent/apps/bamapp/bin/bamweb/bamweb.dll /S /content:/opt/bam/content /verbose",
+  "MainExe": "/Users/bapellanes/src/BamFrameworkCore/BamContent/apps/bamapp/bin/bamweb/bamweb",
+  "ProcessMode": {
+    "Mode": "Dev"
+  }
+}

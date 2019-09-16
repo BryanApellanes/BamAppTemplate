@@ -1,6 +1,20 @@
 [
-  "experimental",
-  "planlinks",
+  "start",
   "tests",
+  "Tools/PlanLinks/planlinks",
+  "Tools/JED/1812-search-underwriters/main",
+  "Tools/JED-1705-partner-name-in-identity/main",
+  "Tools/CaseManagement/main",
+  "Tools/CaseManagement/tests",
+  "Tools/MAIN/main",
+  "Tools/MAIN/tests",
+  "Tools/JED-1812-search-underwriters/main",
+  "Tools/DocumentLinks/main",
+  "Tools/DocumentLinks/tests",
+  "Admin/main",
+  "Admin/tests",
+  "Admin/PlanDocuments/metro4-grid-example",
+  "Admin/PlanDocuments/PlanDocuments",
+  "Elements/head-metro4",
   "Elements/head-common"
 ]
