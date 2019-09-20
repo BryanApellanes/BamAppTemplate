@@ -10,7 +10,7 @@ console.log(arg);
 //planDocumentUploader.setQuotingPath('https://quoting-api-test.test.simon365.com/quoting/api/v1');
 planDocumentUploader.setEnvironment('proj05');
 planDocumentUploader.setDryRun(false);
-planDocumentUploader.setMappingFile(`/Users/bapellanes/src/DocumentLinks/NodeJs/jedan/PlanDocuments/${arg}.csv`);
+planDocumentUploader.setMappingFile(`/Users/bapellanes/.bam/content/apps/bamapp/pages/Admin/PlanDocuments/2020/Mappings/${arg}.csv`);
 planDocumentUploader.uploadDocuments()
     .then(() => {
         console.log('done'.green);

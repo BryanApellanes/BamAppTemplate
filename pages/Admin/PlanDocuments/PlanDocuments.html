@@ -11,47 +11,51 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body style="margin: 10px">
-            <h1>Product Details</h1>
-            <fieldset class="plan-details">
-                <legend>Plan Links</legend>
-                <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="plan-link-id" placeholder="planId" value="H2E8WB43678232" />
-                <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="plan-link-year" placeholder="year" value="2019" />
-                <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="plan-link-month" placeholder="month" value="08" />
-                <input type="button" value="check" id="checkPlanButton" />
-            </fieldset>
+            <!-- quotingPaths = {
+                proj05: "https://quoting-api-proj05.prod.simon365.com/quoting/api/v1",
+                test: "https://quoting-api-test.test.simon365.com/quoting/api/v1",
+                local: "http://localhost:2001/quoting/api/v1"
+            } -->
+        <select id="vimlyEnv">
+            <option value="https://quoting-api-proj05.prod.simon365.com/quoting/api/v1">proj05</option>
+        </select>
 
-            <h2>Documents</h2>
-            <fieldset>
-                <legend>Documents</legend>
-            </fieldset>
-            <div id="holder">
-                Drag your file here
-                </div>
+        <fieldset>
+            <legend>Documents</legend>
+            <table id="productInfoLinks">
+                <thead>
+                    <tr>
+                        <tr></tr>
+                    </tr>                    
+                </thead>
+                <tbody> 
+                    <tr></tr>                   
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="plan-details">
+            <legend>Plan Links</legend>
+            <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="plan-link-id" placeholder="planId" value="H2E8WB43678232" />
+            <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="plan-link-year" placeholder="year" value="2020" />
+            <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="plan-link-month" placeholder="month" value="01" />
+            <input type="button" value="search" id="checkPlanButton" />
+        </fieldset>
 
-                <script>
-                document.addEventListener('drop', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    for (const f of e.dataTransfer.files) {
-                        console.log('File(s) you dragged here: ', f.path);
-                        var txt = '';
-                        for(prop in f){
-                            txt += prop + ": " + f[prop] + "\r\n";
-                        }
-                        console.log(txt);
-                    }
-                });
-                document.addEventListener('dragover', (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                });
-                </script>
-            <script 
-                src="https://code.jquery.com/jquery-3.4.1.js"
-                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-                crossorigin="anonymous">
-            </script>        
-            <script src="../../dist/Admin/main.bundle.js"></script>
+        <script 
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous">
+        </script>        
+        <script src="/dust.js"></script>  
+        <script src="/lodash.full.js"></script>
+        <script src="/dist/Admin/main.bundle.js"></script> 
+        <script src="/serviceproxy/proxies.js"></script>
+        <script src="/datatables/js/jquery.dataTables.js"></script>
+        <script>
+            planDetails.getPdfFilePaths().then(data => {                
+                var dataTable = $("#productInfoLinks").DataTable();
+                _.each(data, path => dataTable.row.add({"File Path": path}));
+            });
+        </script>
     </body>
 </html>

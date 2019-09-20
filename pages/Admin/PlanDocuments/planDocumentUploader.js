@@ -6,7 +6,7 @@ var planDocumentUploader = (function(){
         colors = require("colors"),
         XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest,
         mappingCsv = "/c/bam/src/Demo/NodeJs/jedan/PlanDocuments/DocumentMapping.csv",
-        pdfRoot = "/Users/bapellanes/src/DocumentLinks/NodeJs/jedan/PlanDocuments/PDFs",
+        pdfRoot = "/Users/bapellanes/.bam/content/apps/bamapp/pages/Admin/PlanDocuments/2020/PDFs",
         quotingPath = "http://localhost:2001/quoting/api/v1",
         serviceProviderId = "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
         proj05Token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MzQxYTg5ZS01ODIzLTQzNWEtODMwMC1iODBiZTA0ZWU4ZDEiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLXByb2owNS5wcm9kLnNpbW9uMzY1LmNvbSIsImlhdCI6MTU0NzE0NzQzNCwibmJmIjoxNTQ3MTQ3MTM0LCJleHAiOjE1Nzg3MDQzNjAsInNzIjpudWxsLCJ2ZXIiOjEsInR5cCI6IlNFUlZJQ0VfQUNDT1VOVCIsInJvbCI6W119.CD7lRMXD8glyH8yZHfUKoNLQjcctcKi-YeJstgjvHbE";
@@ -23,7 +23,7 @@ var planDocumentUploader = (function(){
             test: "https://quoting-api-test.test.simon365.com/quoting/api/v1",
             local: "http://localhost:2001/quoting/api/v1"
         }
-        waitUntil = require("wait-until");
+        //waitUntil = require("wait-until");
         dryRun = true;
 
     return {
@@ -151,6 +151,14 @@ var planDocumentUploader = (function(){
                     parameters.successful = true;
                     parameters.quotingPath = quotingPath;                    
                     resolve(JSON.stringify(parameters));
+                    return;
+                }
+                console.log(filePath.yellow);
+                if(!fs.existsSync(filePath)){
+                    var msg = `${filePath} doesn't exist`;
+                    console.log(msg.red);
+                    reject(msg);
+                    fs.appendFileSync('./missingfiles.txt', filePath + '\r\n');
                     return;
                 }
                 var unirest = require("unirest");

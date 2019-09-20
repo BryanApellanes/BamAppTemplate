@@ -1,6 +1,19 @@
 {
   "SearchRules": [
     {
+      "Ext": ".ico",
+      "SearchDirectories": [
+        {
+          "SortOrder": 1,
+          "RelativePath": "~/img"
+        },
+        {
+          "SortOrder": 2,
+          "RelativePath": "~/image"
+        }
+      ]
+    },
+    {
       "Ext": ".png",
       "SearchDirectories": [
         {
@@ -99,7 +112,7 @@
         },
         {
           "SortOrder": 4,
-          "RelativePath": "~/Pages"
+          "RelativePath": "~/pages"
         }
       ]
     }
