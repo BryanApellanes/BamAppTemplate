@@ -19,7 +19,6 @@ namespace Vimly.Plans
 
         public string[] GetPlanIds()
         {
-            bad
             return Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true);
             // FileInfo[] files = ApplicationModel.DataDirectory.GetFiles();
             // List<string> list = new List<string>(files.Select(f=> f.Name));

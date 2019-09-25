@@ -3,7 +3,7 @@
   "DisplayName": "Bamapp",
   "ProcessMode": "Dev",
   "ServerConf": {
-    "ServerKind": 1,
+    "ServerKind": "Bam",
     "Command": "bamweb",
     "Arguments": [
       "/S",

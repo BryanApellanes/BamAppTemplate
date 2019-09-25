@@ -1,5 +1,5 @@
 {
-  "ProcessId": 55171,
+  "ProcessId": 71175,
   "CommandLineArgs": "/Users/bapellanes/src/BamFrameworkCore/BamContent/apps/bamapp/bin/bamweb/bamweb.dll /S /content:/opt/bam/content /verbose /apps:bamapp",
   "MainExe": "/Users/bapellanes/src/BamFrameworkCore/BamContent/apps/bamapp/bin/bamweb/bamweb",
   "ProcessMode": {
