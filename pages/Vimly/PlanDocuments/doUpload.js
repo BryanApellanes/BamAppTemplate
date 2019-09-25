@@ -8,9 +8,10 @@ console.log(arg);
 // proj05-dev: https://quoting-api-proj05.prod.simon365.com/quoting/api/v1
 //planDocumentUploader.setTokenEnvironment("test");
 //planDocumentUploader.setQuotingPath('https://quoting-api-test.test.simon365.com/quoting/api/v1');
-planDocumentUploader.setEnvironment('proj05');
+planDocumentUploader.setEnvironment('local');
+planDocumentUploader.setPdfRoot('/Users/bapellanes/.bam/content/apps/bamapp/pages/Vimly/PlanDocuments/2020/PDFs');
 planDocumentUploader.setDryRun(false);
-planDocumentUploader.setMappingFile(`/Users/bapellanes/.bam/content/apps/bamapp/pages/Admin/PlanDocuments/2020/Mappings/${arg}.csv`);
+planDocumentUploader.setMappingFile(`/Users/bapellanes/.bam/content/apps/bamapp/pages/Vimly/PlanDocuments/2020/Mappings/${arg}.csv`);
 planDocumentUploader.uploadDocuments()
     .then(() => {
         console.log('done'.green);

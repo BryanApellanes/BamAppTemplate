@@ -30,7 +30,8 @@
     "*Proxyables.dll"
   ],
   "ServiceReferences": [
-    "System.Collections.dll"
+    "System.Collections.dll",
+    "System.Console.dll"
   ],
   "ServiceTypeNames": [
     "Bam.Net.ServiceProxy.Echo, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",

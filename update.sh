@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#!/bin/bash
+# TODO: this should check if the folder ~/.bam/content is a symlink 
+
 # copies $1 to ~/.bam/content/apps/$1
 
 APPNAME=${PWD##*/}

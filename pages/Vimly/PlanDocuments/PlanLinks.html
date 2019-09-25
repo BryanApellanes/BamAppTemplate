@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Plan Links</title>
+        <link rel="stylesheet" type="text/css" href="../../css/site.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/datatables.min.css" />
+    </head>
+    <body>
+            <select id="vimlyEnv">
+                <option value="http://localhost:2001/quoting/api/v1">local</option>
+                <option value="https://quoting-api-proj05.prod.simon365.com/quoting/api/v1">proj05</option>
+                <option value="https://quoting-api-staging.prod.simon365.com/quoting/api/v1">staging</option>
+                <option value="https://quoting-api.prod.simon365.com/quoting/api/v1">prod</option>
+            </select>
+            <h1>Plan Links</h1>
+            <input type="text" id="environment" />
+            <div id="main">
+                
+            </div>
+            <script 
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous">
+            </script>
+            <script src="../dist/PlanDocuments/main.js"></script>
+
+            <span id="end-body">
+
+            </span>
+    </body>
+</html>

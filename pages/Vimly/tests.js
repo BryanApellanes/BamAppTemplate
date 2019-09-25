@@ -9,7 +9,7 @@ function msg(txt) {
     console.log(txt);
 }
 
-describe("MAIN - Tools", function(){
+describe("MAIN - Tests", function(){
     
     it("Should do something useful", function(){
         msg('put test code here');

@@ -110,6 +110,10 @@ var environments = (function(){
             console.log(`getToken: environment currently set to ${current.env}`);
             return current.token;
         },
+        refreshToken: function(){
+            console.log(`refreshToken: environment currently set to ${current.env}`);
+            return getToken(current.env);
+        },
         getAuthorizationHeader: function(env){
             var env = env || current.env;
             return new Promise((resolve, reject) => {

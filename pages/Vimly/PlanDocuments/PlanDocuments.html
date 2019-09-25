@@ -11,11 +11,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body style="margin: 10px">
-            <!-- quotingPaths = {
-                proj05: "https://quoting-api-proj05.prod.simon365.com/quoting/api/v1",
-                test: "https://quoting-api-test.test.simon365.com/quoting/api/v1",
-                local: "http://localhost:2001/quoting/api/v1"
-            } -->
         <select id="vimlyEnv">
             <option value="http://localhost:2001/quoting/api/v1">local</option>
             <option value="https://quoting-api-proj05.prod.simon365.com/quoting/api/v1">proj05</option>
@@ -25,6 +20,15 @@
 
         <div class="container">
             <div class="row">
+                <div class="col-6">
+                    <fieldset class="plan-details">
+                        <legend>Plan Links</legend>
+                        <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="plan-link-id" placeholder="planId" value="H2E8WB43678232" />
+                        <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="plan-link-year" placeholder="year" value="2020" />
+                        <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="plan-link-month" placeholder="month" value="01" />
+                        <input type="button" value="search" id="checkPlanButton" />
+                    </fieldset>
+                </div>
                 <div class="col-6">
                     <fieldset>
                         <legend>Documents</legend>
@@ -40,15 +44,6 @@
                         </table>
                     </fieldset>
                 </div>
-                <div class="col-6">
-                    <fieldset class="plan-details">
-                        <legend>Plan Links</legend>
-                        <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="plan-link-id" placeholder="planId" value="H2E8WB43678232" />
-                        <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="plan-link-year" placeholder="year" value="2020" />
-                        <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="plan-link-month" placeholder="month" value="01" />
-                        <input type="button" value="search" id="checkPlanButton" />
-                    </fieldset>
-                </div>
             </div>
         </div>
 
@@ -59,11 +54,11 @@
         </script>        
         <script src="/dust.js"></script>  
         <script src="/lodash.full.js"></script>
-        <script src="/dist/Admin/main.bundle.js"></script> 
         <script src="/serviceproxy/proxies.js"></script>
         <script src="/datatables/js/jquery.dataTables.js"></script>
+        <script src="/dist/Vimly/main.bundle.js"></script>
         <script>
-            planDetails.getPdfFilePaths().then(data => {                
+            planDetails.getPdfFileNames().then(data => {                
                 var dataSet = [];
                 _.each(data, pdf => {
                     var row = []

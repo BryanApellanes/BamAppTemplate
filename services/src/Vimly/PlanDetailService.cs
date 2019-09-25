@@ -2,6 +2,7 @@ using System;
 using Bam.Net;
 using Bam.Net.Presentation;
 using Bam.Net.Services;
+using Bam.Net.Server;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
@@ -14,11 +15,12 @@ namespace Vimly.Plans
     public class PlanDetailService
     {
         [Inject]
-        public ApplicationModel ApplicationModel {get;set;}
+        public ApplicationModel Application {get;set;}
 
         public string[] GetPlanIds()
         {
-            return ApplicationModel.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true);
+            bad
+            return Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true);
             // FileInfo[] files = ApplicationModel.DataDirectory.GetFiles();
             // List<string> list = new List<string>(files.Select(f=> f.Name));
             // list.Add(ApplicationModel.DataDirectory.FullName);
@@ -27,7 +29,12 @@ namespace Vimly.Plans
 
         public string[] GetPdfFilePaths()
         {
-            return ApplicationModel.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f=> f.FullName).ToArray();
+            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => f.FullName).ToArray();
+        }
+
+        public string[] GetPdfFileNames()
+        {
+            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => f.Name).ToArray();
         }
     }
 }
