@@ -19,11 +19,9 @@ namespace Vimly.Plans
 
         public string[] GetPlanIds()
         {
-            return Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true);
-            // FileInfo[] files = ApplicationModel.DataDirectory.GetFiles();
-            // List<string> list = new List<string>(files.Select(f=> f.Name));
-            // list.Add(ApplicationModel.DataDirectory.FullName);
-            // return list.ToArray();
+            HashSet<string> uniqueIds = new HashSet<string>();
+            Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true).Each(s => uniqueIds.Add(s));
+            return uniqueIds.ToArray();
         }
 
         public string[] GetPdfFilePaths()

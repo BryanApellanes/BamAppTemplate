@@ -6,16 +6,17 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> 
         <link rel="stylesheet" type="text/css" href="../../css/site.css" />
         <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
-        <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css" />
+        <link rel="stylesheet" href="./PlanDocuments.css" />
         <!--<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body style="margin: 10px">
         <select id="vimlyEnv">
-            <option value="http://localhost:2001/quoting/api/v1">local</option>
-            <option value="https://quoting-api-proj05.prod.simon365.com/quoting/api/v1">proj05</option>
-            <option value="https://quoting-api-staging.prod.simon365.com/quoting/api/v1">staging</option>
-            <option value="https://quoting-api.prod.simon365.com/quoting/api/v1">prod</option>
+            <option value="local">local</option>
+            <option value="proj05">proj05</option>
+            <option value="staging">staging</option>
+            <option value="prod">prod</option>
         </select>
 
         <div class="container">
@@ -23,16 +24,29 @@
                 <div class="col-6">
                     <fieldset class="plan-details">
                         <legend>Plan Links</legend>
-                        <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="plan-link-id" placeholder="planId" value="H2E8WB43678232" />
-                        <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="plan-link-year" placeholder="year" value="2020" />
-                        <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="plan-link-month" placeholder="month" value="01" />
-                        <input type="button" value="search" id="checkPlanButton" />
+                        <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="planId" placeholder="planId" value="49316MN1070001" />
+                        <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="planYear" placeholder="year" value="2020" />
+                        <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="planMonth" placeholder="month" value="01" />
+                        <input type="button" value="search" id="planLinksSearchButton" />
+                    </fieldset>
+                    <fieldset>
+                        <legend>Plans</legend>
+                        <table id="planIds">
+                            <thead>
+                                <tr>
+                                    <tr><th>PlanId</th></tr>
+                                </tr>                    
+                            </thead>
+                            <tbody> 
+                                <tr></tr>                   
+                            </tbody>
+                        </table>
                     </fieldset>
                 </div>
                 <div class="col-6">
                     <fieldset>
                         <legend>Documents</legend>
-                        <table id="productInfoLinks">
+                        <table id="documentNames">
                             <thead>
                                 <tr>
                                     <tr><th>Document</th></tr>
@@ -42,6 +56,37 @@
                                 <tr></tr>                   
                             </tbody>
                         </table>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <fieldset>
+                        <legend>Ad Hoc Script</legend>
+
+                        <textarea id="adHocScript">
+_.each(planDocs.prop("planIds"), pid => {
+    planDocs.printMessage(pid, true);
+});
+                        </textarea>
+                    </fieldset>
+
+                    <button id="adHocScriptRunButton">Run</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input id="sbcLinkPutTemplate" type="text" value="{{quoting_path}}/files/3d9c7c71-4860-496e-8880-bbbe0f830b4d/sbc-link?planId={{planId}}&effectiveDate={{effectiveYear}}-{{effectiveMonth}}-01&linkTitle={{fileName}}&storageLocation=s3://quoting.prod.prod.simon365.com/sbc/{{effectiveYear}}-{{effectiveMonth}}-01/{{planId}}/{{fileName}}" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <fieldset>
+                        <legend>Messages:</legend>
+
+                        <textarea id="messages">
+
+                        </textarea>
                     </fieldset>
                 </div>
             </div>
@@ -59,20 +104,7 @@
         <script src="/serviceproxy/proxies.js"></script>
         <script src="/datatables/js/jquery.dataTables.js"></script>
         <script>
-            planDetails.getPdfFileNames().then(data => {                
-                var dataSet = [];
-                _.each(data, pdf => {
-                    var row = []
-                    row.push(pdf);
-                    dataSet.push(row);
-                });
-                var dataTable = $("#productInfoLinks").DataTable({
-                    data: dataSet,
-                    columns: [
-                        {title: "Name"}
-                    ]
-                });
-            });
+            // moved code into PlanDocuments.js
         </script>
     </body>
 </html>

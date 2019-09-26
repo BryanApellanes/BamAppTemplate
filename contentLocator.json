@@ -92,6 +92,10 @@
         {
           "SortOrder": 1,
           "RelativePath": "~/css"
+        },
+        {
+          "SortOrder": 2,
+          "RelativePath": "~/pages"
         }
       ]
     },
