@@ -3,7 +3,8 @@
     <head>
         <title>Plan Documents</title>
         <link rel="stylesheet" type="text/css" href="https://unpkg.com/mocha@4.0.1/mocha.css" />
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> 
+        <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />        
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> -->
         <link rel="stylesheet" type="text/css" href="../../css/site.css" />
         <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
         <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css" />
@@ -22,13 +23,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <fieldset class="plan-details">
-                        <legend>Plan Links</legend>
-                        <label class="plan-details-label" for="plan-link-id">Plan Id</label><input type="text" id="planId" placeholder="planId" value="49316MN1070001" />
-                        <label class="plan-details-label" for="plan-link-year">Plan Year</label><input type="text" id="planYear" placeholder="year" value="2020" />
-                        <label class="plan-details-label" for="plan-link-month">Plan Month</label><input type="text" id="planMonth" placeholder="month" value="01" />
-                        <input type="button" value="search" id="planLinksSearchButton" />
-                    </fieldset>
                     <fieldset>
                         <legend>Plans</legend>
                         <table id="planIds">
@@ -60,9 +54,46 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-6">
+                    <fieldset class="plan-details">
+                        <legend>Links</legend>
+                        <label class="plan-details-label" for="planId">Plan Id</label><input type="text" id="planId" placeholder="planId" value="49316MN1070001" />
+                        <label class="plan-details-label" for="planYear">Plan Year</label><input type="text" id="planYear" placeholder="year" value="2020" />
+                        <label class="plan-details-label" for="planMonth">Plan Month</label><input type="text" id="planMonth" placeholder="month" value="01" />
+                        <input type="button" value="search" id="planLinksSearchButton" />
+
+                        <table id="planLinks">
+                            <thead>
+                                <tr>
+                                    <tr><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
+                                </tr>                    
+                            </thead>
+                            <tbody> 
+                                <tr></tr>                   
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+                <div class="col-6">
+                    <fieldset class="plan-details">
+                        <legend>Mappings</legend>
+                        <table id="planDocumentMappings">
+                            <thead>
+                                <tr>
+                                    <tr><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
+                                </tr>                    
+                            </thead>
+                            <tbody> 
+                                <tr></tr>                   
+                            </tbody>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12">
                     <fieldset>
-                        <legend>Ad Hoc Script</legend>
+                        <legend>Script Editor</legend>
 
                         <textarea id="adHocScript">
 _.each(planDocs.prop("planIds"), pid => {
@@ -76,7 +107,7 @@ _.each(planDocs.prop("planIds"), pid => {
             </div>
             <div class="row">
                 <div class="col-12">
-                    <input id="sbcLinkPutTemplate" type="text" value="{{quoting_path}}/files/3d9c7c71-4860-496e-8880-bbbe0f830b4d/sbc-link?planId={{planId}}&effectiveDate={{effectiveYear}}-{{effectiveMonth}}-01&linkTitle={{fileName}}&storageLocation=s3://quoting.prod.prod.simon365.com/sbc/{{effectiveYear}}-{{effectiveMonth}}-01/{{planId}}/{{fileName}}" />
+                    <input id="sbcLinkPutTemplate" type="text" value="{{quotingPath}}/files/3d9c7c71-4860-496e-8880-bbbe0f830b4d/sbc-link?planId={{planId}}&effectiveDate={{effectiveYear}}-{{effectiveMonth}}-01&linkTitle={{fileName}}&storageLocation=s3://quoting.prod.prod.simon365.com/sbc/{{effectiveYear}}-{{effectiveMonth}}-01/{{planId}}/{{fileName}}" />
                 </div>
             </div>
             <div class="row">
@@ -102,7 +133,7 @@ _.each(planDocs.prop("planIds"), pid => {
         <script src="/dist/Vimly/main.bundle.js"></script>
 
         <script src="/serviceproxy/proxies.js"></script>
-        <script src="/datatables/js/jquery.dataTables.js"></script>
+        <script src="/Datatables/datatables.min.js"></script>
         <script>
             // moved code into PlanDocuments.js
         </script>

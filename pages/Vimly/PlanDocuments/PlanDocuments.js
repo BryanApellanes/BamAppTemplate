@@ -1,5 +1,3 @@
-import { template } from "handlebars";
-
 $(document).ready(function(){
     var DEFAULT_PLANID = "49316MN1070001";
     var envs = environments; // see main
@@ -21,39 +19,39 @@ $(document).ready(function(){
             }
             return this.getProp(name);
         },
-        load: function(){
+        populateTable: function(tableId, dataPromise){
             var _this = this;
-            planDetails.getPdfFileNames().then(function(data) { 
-                _this.setProp("documentNames", data);              
-                var dataSet = []; // create the data set to account for future changes that return objects instead of strings
-                _.each(data, pdf => {
-                    var row = [];
-                    row.push(pdf);
-                    dataSet.push(row);
-                });
-                documentNamesTable = $("#documentNames").DataTable({
-                    data: dataSet,
-                    columns: [
-                        {title: "Name"}
-                    ]
-                });
-            });
+            if(!_.isString(tableId)){
+                throw new Error("tableId must be a string");
+            }
+            if(!_.isFunction(dataPromise)){
+                throw new Error("dataPromise must be a function that retuns a promise and resolves to data in the shape of the spcified tableId");
+            }
+            if(!tableId.startsWith("#")){
+                tableId = `#${tableId}`;
+            }
+            dataPromise().then(function(data){
+                var tableName = tableId.substring(1),
+                    columns = [];
 
-            planDetails.getPlanIds().then(function(data) {
-                _this.setProp("planIds", data);
-                var dataSet = [];
-                _.each(data, planId => {
-                    var row = [];
-                    row.push(planId);
-                    dataSet.push(row);
-                });
-                planIdsTable = $("#planIds").DataTable({
-                    data: dataSet,
-                    columns: [
-                        {title: "Plan Ids"}
-                    ]
-                });
-            });
+                if(data.length > 0){
+                    for(var prop in data[0]){
+                        columns.push({title: prop});
+                    }
+                }
+                var arrayOfArrays = [];
+                _.each(data, item => arrayOfArrays.push(obj.toArray(item)));
+                _this.setProp(`${tableName}_data`, data);
+                _this.setProp(`${tableName}_table`, $(tableId).DataTable({
+                    select: true,
+                    data: arrayOfArrays,
+                    columns: columns
+                }))
+            })
+        },
+        load: function(){
+            this.populateTable("#documentNames", planDetails.getPdfFileNames);
+            this.populateTable("#planIds", planDetails.getPlanIds);
         },
         ratesPath: function getRatesPath(){
             return envs.getRatesPath();
@@ -70,28 +68,30 @@ $(document).ready(function(){
         planMonth: function getPlanMonth(){
             return $("#planMonth").val() || '';
         },
-        getPlanLinks: function(){
-            var selectedEnv = $("#vimlyEnv option:selected").text(); 
-            envs.setCurrent(selectedEnv);                        
-            envs.getAuthorizationHeader(selectedEnv)
-                .then(header => {
-                        var ratesPath = planDocumentsPage.ratesPath(),
-                        planId = planDocumentsPage.planId(),
-                        planYear = planDocumentsPage.planYear(),
-                        planMonth = planDocumentsPage.planMonth(),
-                        xhr = bam.xhr();
-        
-                    var getUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/${planYear}/${planId}/info/links?effectiveDate=${planYear}-${planMonth}-01`;
-                    
-                    xhr.get(header, getUrl).then(x => {
-                        debugger;
-                        var data = JSON.parse(x.responseText);
-                        _.each(data, (d) => {
-                            console.log(JSON.stringify(d));
-                        })
-                    });
-                })
-                .catch(e => console.log(e));
+        getSelectedPlanLinks: function(){
+            return new Promise((resolve, reject) => {
+
+                var selectedEnv = $("#vimlyEnv option:selected").text(); 
+                envs.setCurrent(selectedEnv);                        
+                envs.getAuthorizationHeader(selectedEnv)
+                    .then(header => {
+                            var ratesPath = planDocumentsPage.ratesPath(),
+                            planId = planDocumentsPage.planId(),
+                            planYear = planDocumentsPage.planYear(),
+                            planMonth = planDocumentsPage.planMonth(),
+                            xhr = bam.xhr();
+            
+                        var getUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/${planYear}/${planId}/info/links?effectiveDate=${planYear}-${planMonth}-01`;
+                        
+                        xhr.get(header, getUrl)
+                            .then(x => {
+                                var data = JSON.parse(x.responseText);
+                                resolve(data);
+                            })
+                            .catch(reject);
+                    })
+                    .catch(reject);
+            });
         },
         clearMessages: function(){
             $("#messages").val("");
@@ -109,7 +109,7 @@ $(document).ready(function(){
         },
         attachEventHandlers: function(){
             $("#planLinksSearchButton").off('click').on('click', function(){
-                planDocumentsPage.getPlanLinks();
+                planDocumentsPage.getSelectedPlanLinks();
             });   
             $("#adHocScriptRunButton").off('click').on('click', function(){
                 planDocumentsPage.runAdHocScript();
@@ -140,8 +140,12 @@ $(document).ready(function(){
             return this.getSbcPutTemplate()(model);
         },
         renderPutLinks: function(){
+            var selectedEnv = $("#vimlyEnv option:selected").text(); 
+            envs.setCurrent(selectedEnv);  
+            var quotingPath = envs.getQuotingPath();
             _.each(planDocumentsPage.prop("planIds"), planId => {
                 var putUrl = this.renderSbcPutTemplate({
+                    quotingPath: quotingPath,
                     planId: planId,
                     effectiveYear: this.planYear(),
                     effectiveMonth: this.planMonth()

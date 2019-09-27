@@ -85,7 +85,7 @@ var environments = (function(){
             return {
                 env: env,
                 quotingPath: quotingPaths[env],
-                addressPath: quotingPaths[env],
+                addressPath: addressPaths[env],
                 ratesPath: ratesPaths[env],
                 identityPath: identityPaths[env],
                 serviceProviderId: defaultSvcProviderId

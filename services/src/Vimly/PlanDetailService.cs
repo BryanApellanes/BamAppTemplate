@@ -17,21 +17,20 @@ namespace Vimly.Plans
         [Inject]
         public ApplicationModel Application {get;set;}
 
-        public string[] GetPlanIds()
+        public object[] GetPlanIds()
         {
             HashSet<string> uniqueIds = new HashSet<string>();
             Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true).Each(s => uniqueIds.Add(s));
-            return uniqueIds.ToArray();
+            return uniqueIds.Select(id => new {PlanId = id}).ToArray();
         }
-
         public string[] GetPdfFilePaths()
         {
             return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => f.FullName).ToArray();
         }
 
-        public string[] GetPdfFileNames()
+        public object[] GetPdfFileNames()
         {
-            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => f.Name).ToArray();
+            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => new {FileName = f.Name}).ToArray();
         }
     }
 }
