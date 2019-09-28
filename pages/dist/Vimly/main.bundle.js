@@ -35886,38 +35886,49 @@ $(document).ready(function(){
             return this.getProp(name);
         },
         populateTable: function(tableId, dataPromise){
-            var _this = this;
-            if(!_.isString(tableId)){
-                throw new Error("tableId must be a string");
-            }
-            if(!_.isFunction(dataPromise)){
-                throw new Error("dataPromise must be a function that retuns a promise and resolves to data in the shape of the spcified tableId");
-            }
-            if(!tableId.startsWith("#")){
-                tableId = `#${tableId}`;
-            }
-            dataPromise().then(function(data){
-                var tableName = tableId.substring(1),
-                    columns = [];
-
-                if(data.length > 0){
-                    for(var prop in data[0]){
-                        columns.push({title: prop});
-                    }
+            return new Promise((resolve, reject) =>
+            {
+                var _this = this;
+                if(!_.isString(tableId)){
+                    throw new Error("tableId must be a string");
                 }
-                var arrayOfArrays = [];
-                _.each(data, item => arrayOfArrays.push(obj.toArray(item)));
-                _this.setProp(`${tableName}_data`, data);
-                _this.setProp(`${tableName}_table`, $(tableId).DataTable({
-                    select: true,
-                    data: arrayOfArrays,
-                    columns: columns
-                }))
-            })
+                if(!_.isFunction(dataPromise)){
+                    throw new Error("dataPromise must be a function that retuns a promise and resolves to data in the shape of the spcified tableId");
+                }
+                if(!tableId.startsWith("#")){
+                    tableId = `#${tableId}`;
+                }
+                dataPromise()
+                    .then(function(data){
+                        var tableName = tableId.substring(1),
+                            columns = [];
+
+                        if(data.length > 0){
+                            for(var prop in data[0]){
+                                columns.push({title: prop});
+                            }
+                        }
+                        var arrayOfArrays = [];
+                        _.each(data, item => arrayOfArrays.push(obj.toArray(item)));
+                        _this.setProp(`${tableName}_data`, data);
+                        _this.setProp(`${tableName}_table`, $(tableId).DataTable({
+                            select: true,
+                            data: arrayOfArrays,
+                            columns: columns
+                        }))
+                        resolve(data);
+                    })
+                    .catch(reject);
+            });
         },
         load: function(){
+            var _this = this;
             this.populateTable("#documentNames", planDetails.getPdfFileNames);
-            this.populateTable("#planIds", planDetails.getPlanIds);
+            this.populateTable("#planIds", planDetails.getPlanIds).then(function(){
+
+            });
+            this.populateTable("#planDocumentMappings", () => planDetails.getMappings("MedicalJan012020.csv"));
+            this.populateTable("#fixPlanLinks", planDetails.getFixedProductLinks);
         },
         ratesPath: function getRatesPath(){
             return envs.getRatesPath();
@@ -35959,6 +35970,37 @@ $(document).ready(function(){
                     .catch(reject);
             });
         },
+        getAuthorizationHeader: function(){
+            var selectedEnv = $("#vimlyEnv option:selected").text(); 
+            envs.setCurrent(selectedEnv);                        
+            return envs.getAuthorizationHeader(selectedEnv);
+        },
+        updateFixedLinks: function(){
+            var oneLink = planDocumentsPage.prop("fixPlanLinks_data")[0];
+            var planId = oneLink.planId;
+            var link = _.clone(oneLink);
+            delete link.planId;
+            console.log(planId);
+            console.log(link);
+            this.updateLink(planId, link);
+        },        
+        updateLink: function(planId, link){
+            return new Promise((resolve, reject) => {
+                var ratesPath = planDocumentsPage.ratesPath();
+                //{{rates_path}}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/49316MN1070001/info/links/4fc6caf7-0794-3d4a-af5d-8554aa788dfe?effectiveDate=2020-01-01
+                var putUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/${planId}/info/links/${link.id}?effectiveDate=2020-01-01`;
+                this.getAuthorizationHeader()
+                    .then(authHeader => {
+                        debugger;
+                        bam.xhr().put(link, authHeader, putUrl)
+                            .then(x => {
+                                var data = JSON.parse(x.responseText);
+                                resolve(data);
+                            })
+                            .catch(reject);
+                    })
+            });
+        },
         clearMessages: function(){
             $("#messages").val("");
         },
@@ -35979,6 +36021,9 @@ $(document).ready(function(){
             });   
             $("#adHocScriptRunButton").off('click').on('click', function(){
                 planDocumentsPage.runAdHocScript();
+            });
+            $("#fixStuffButton").off('click').on('click', function(){
+                planDocumentsPage.updateFixedLinks();
             });
         },
         getLinkUpdateUrl: function(options){

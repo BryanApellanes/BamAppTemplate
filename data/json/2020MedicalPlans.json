@@ -1,0 +1,1029 @@
+[
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220007",
+      "planName": "High Value Silver $3000 Plan 551",
+      "planDescription": "High Value Silver $3000 Plan 551",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "cd1cacb0-fd0e-323c-924a-c4f15e2c7e70",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "66efad8e-020b-3e14-9f7d-92746349c209",
+            "title": "57129MN0220007-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220007/57129MN0220007-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220006",
+      "planName": "High Value Bronze $8150 Plan 550",
+      "planDescription": "High Value Bronze $8150 Plan 550",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF004",
+        "links": [
+          {
+            "id": "24a0d17c-7a3a-3b59-9034-5c82334a066a",
+            "title": "57129MN0220006-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220006/57129MN0220006-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "67982006-bf2d-3c78-b850-9f1d9b39d531",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "bronze",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220009",
+      "planName": "High Value HSA Silver $2800 Plan 553",
+      "planDescription": "High Value HSA Silver $2800 Plan 553",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF002",
+        "links": [
+          {
+            "id": "7f75c672-7754-3da3-8ed1-c3c5434ed223",
+            "title": "57129MN0220009-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220009/57129MN0220009-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "5ca5c81a-c8a2-3a45-b450-62bc3b392502",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220008",
+      "planName": "High Value Silver $3800 Plan 552",
+      "planDescription": "High Value Silver $3800 Plan 552",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "4fd41422-a78f-32f3-8284-a3d72136078b",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "ad675683-3f8d-3f54-9c6b-e0fd547742dc",
+            "title": "57129MN0220008-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220008/57129MN0220008-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220003",
+      "planName": "High Value HSA Silver $4250 Plan 660",
+      "planDescription": "High Value HSA Silver $4250 Plan 660",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "05523201-f7c5-3aca-81af-fdcd32f6831a",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "6d46bba6-e588-31a5-b715-eb9f6c87c65f",
+            "title": "57129MN0220003-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220003/57129MN0220003-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070005",
+      "planName": "BlueAccess Silver $3000 Plan 625",
+      "planDescription": "BlueAccess Silver $3000 Plan 625",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "eb108e5f-0e7e-3f21-b2ab-ab5c3de9f7db",
+            "title": "49316MN1070005-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070005/49316MN1070005-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "6afc02c9-235d-3111-ae05-0c285b9bb65a",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070006",
+      "planName": "BlueAccess Silver $3800 Plan 627",
+      "planDescription": "BlueAccess Silver $3800 Plan 627",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "67d4d92d-6247-35d6-8594-1c79d20ba3a3",
+            "title": "49316MN1070006-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070006/49316MN1070006-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "8b9dfcaa-60d3-349f-beaa-f6accc5d7f8d",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220005",
+      "planName": "High Value Gold $1000 Plan 664",
+      "planDescription": "High Value Gold $1000 Plan 664",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "b248d03d-6248-3926-a432-9897ee3f6a43",
+            "title": "57129MN0220005-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220005/57129MN0220005-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "775613b1-1657-32ed-ad7f-1c32c00ff5a1",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220004",
+      "planName": "High Value Silver $2500 Plan 662",
+      "planDescription": "High Value Silver $2500 Plan 662",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "fd5afdd8-c487-3c47-9371-85e1e96b9906",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "0aa2cf33-5020-3590-b294-c07349494770",
+            "title": "57129MN0220004-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220004/57129MN0220004-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070004",
+      "planName": "BlueAccess Silver $2500 Plan 623",
+      "planDescription": "BlueAccess Silver $2500 Plan 623",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "fbbb9571-ee3a-3a77-8849-8382387f4990",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "7e1d2e09-a8f5-3ce3-b90a-7f71d7b24ab5",
+            "title": "49316MN1070004-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070004/49316MN1070004-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220001",
+      "planName": "High Value HSA Bronze $6900 Plan 656",
+      "planDescription": "High Value HSA Bronze $6900 Plan 656",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "815278e4-7074-3812-a47d-87a92cfb784e",
+            "title": "57129MN0220001-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220001/57129MN0220001-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "56e2948e-a17d-34ce-b979-7aebbf89ddb5",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "expanded bronze",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070010",
+      "planName": "BlueAccess Gold $500 Plan 635",
+      "planDescription": "BlueAccess Gold $500 Plan 635",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "c2bf80fc-20bb-3ed3-bf1f-dc917d01350d",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "48d00c37-5f2f-345e-b2df-9dad9429e5a9",
+            "title": "49316MN1070010-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070010/49316MN1070010-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070011",
+      "planName": "BlueAccess Gold $1000 Plan 637",
+      "planDescription": "BlueAccess Gold $1000 Plan 637",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "a9702198-5b2f-3555-a02c-0bd11a626431",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "008e9a41-8167-3023-ae86-1854f26e5f4d",
+            "title": "49316MN1070011-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070011/49316MN1070011-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220014",
+      "planName": "High Value HSA Gold $2350 Plan 558",
+      "planDescription": "High Value HSA Gold $2350 Plan 558",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "6c86230c-ee28-317a-ac02-877eaa05206a",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "f400070f-9968-3757-930a-fe35a5b9ee78",
+            "title": "57129MN0220014-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220014/57129MN0220014-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220013",
+      "planName": "High Value Gold $2000 Plan 557",
+      "planDescription": "High Value Gold $2000 Plan 557",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "d7c5cbc4-39aa-3c54-999e-d3cb23bbb7c4",
+            "title": "57129MN0220013-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220013/57129MN0220013-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "2b1c10d3-0d94-37a9-8491-1851058ae945",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220016",
+      "planName": "High Value Silver $3750 Plan 560",
+      "planDescription": "High Value Silver $3750 Plan 560",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "f98722bc-d1fa-3313-9876-a527160e79eb",
+            "title": "57129MN0220016-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220016/57129MN0220016-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "81fdf2b7-58af-35d2-bda0-d7b3e0ab5a94",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220015",
+      "planName": "High Value Platinum No Deductible Plan 559",
+      "planDescription": "High Value Platinum No Deductible Plan 559",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "640eefbf-87b5-325c-a6fc-69d4d034567c",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "ac424268-d031-3dcc-bdc7-6d721a2a3a52",
+            "title": "57129MN0220015-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220015/57129MN0220015-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "platinum",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220010",
+      "planName": "High Value HSA Silver $5000 Plan 554",
+      "planDescription": "High Value HSA Silver $5000 Plan 554",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "f4117c8b-26ea-30d6-b09f-181d53a37bab",
+            "title": "57129MN0220010-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220010/57129MN0220010-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "9c097889-986a-3367-b6a9-c59d6818e56f",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220012",
+      "planName": "High Value Gold $500 Plan 556",
+      "planDescription": "High Value Gold $500 Plan 556",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "60054deb-3c9c-3dfd-94bd-55a84e4f763f",
+            "title": "57129MN0220012-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220012/57129MN0220012-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "af03a764-5c76-3a71-813b-a219f5948acb",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "57129MN0220011",
+      "planName": "High Value HSA Silver $3750 Plan 555",
+      "planDescription": "High Value HSA Silver $3750 Plan 555",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "57129MN022",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "bb8b2359-272a-3e3f-a31b-eec91794110e",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "2acd9b2f-b53c-3a46-8242-90e1d288bc64",
+            "title": "57129MN0220011-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/57129MN0220011/57129MN0220011-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN009",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS001"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070001",
+      "planName": "BlueAccess HSA Bronze $6900 Plan 624",
+      "planDescription": "BlueAccess HSA Bronze $6900 Plan 624",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "f22fafd2-4476-3505-80db-abfd2bebbf25",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "e821c759-de6f-3b67-8e29-42e0e41d152e",
+            "title": "49316MN1070001-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070001/49316MN1070001-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "4fc6caf7-0794-3d4a-af5d-8554aa788dfe",
+            "title": "49316MN1070001-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/2020-01-01/49316MN1070001/49316MN1070001-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "expanded bronze",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070027",
+      "planName": "BlueAccess HSA Silver $3750 Plan 642",
+      "planDescription": "BlueAccess HSA Silver $3750 Plan 642",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "bc9123b8-f2e2-3570-ab38-cb8a13461c5f",
+            "title": "49316MN1070027-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070027/49316MN1070027-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "c092ae92-a423-3934-bfef-8a7bbedb9d09",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070028",
+      "planName": "BlueAccess Bronze $8150 Plan 618",
+      "planDescription": "BlueAccess Bronze $8150 Plan 618",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF004",
+        "links": [
+          {
+            "id": "6bfe5e7b-331f-395c-80ab-9f8f53ebc983",
+            "title": "49316MN1070028-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070028/49316MN1070028-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "d0bafd19-4733-321a-a04f-4daf80f9695b",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "bronze",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070026",
+      "planName": "BlueAccess HSA Silver $5000 Plan 640 ",
+      "planDescription": "BlueAccess HSA Silver $5000 Plan 640 ",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "873c56c8-9122-3cf9-972f-a0be1d9e6a85",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "fb587880-ec17-32c4-ab97-5a2624b27ac4",
+            "title": "49316MN1070026-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070026/49316MN1070026-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070029",
+      "planName": "BlueAccess Gold $2000 Plan 652",
+      "planDescription": "BlueAccess Gold $2000 Plan 652",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "24f1db6a-2f06-3712-9064-4c557744da1b",
+            "title": "49316MN1070029-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070029/49316MN1070029-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "5ba39f69-96af-393a-a270-818b92125516",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070030",
+      "planName": "BlueAccess Silver $3750 Plan 626",
+      "planDescription": "BlueAccess Silver $3750 Plan 626",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "84e535dc-beaa-34e1-9983-bfa064958c44",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "8df4ac58-6e82-302b-9db8-0bf8350f9f0c",
+            "title": "49316MN1070030-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070030/49316MN1070030-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070018",
+      "planName": "BlueAccess HSA Gold $2350 Plan 653",
+      "planDescription": "BlueAccess HSA Gold $2350 Plan 653",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "4e84d751-08a4-3f93-a4be-54028848dad6",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "453a9fb3-b8ac-3d9b-a452-e7b5e96b727a",
+            "title": "49316MN1070018-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070018/49316MN1070018-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "gold",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070019",
+      "planName": "BlueAccess Platinum No Deductible Plan 655",
+      "planDescription": "BlueAccess Platinum No Deductible Plan 655",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF003",
+        "links": [
+          {
+            "id": "46f630b8-ca90-3986-b300-c968ffa7fd45",
+            "title": "BasicRX Individual Small Group",
+            "link": "https://www.bluecrossmn.com/basicrxindividualsmallgroup2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          },
+          {
+            "id": "faa65788-9f51-3d02-b5c9-1125215172f3",
+            "title": "49316MN1070019-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070019/49316MN1070019-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          }
+        ],
+        "levelOfCoverage": "platinum",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070020",
+      "planName": "BlueAccess HSA Silver $4250 Plan 645",
+      "planDescription": "BlueAccess HSA Silver $4250 Plan 645",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF001",
+        "links": [
+          {
+            "id": "42f600d5-4313-3bb5-9575-20289ba244e8",
+            "title": "49316MN1070020-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070020/49316MN1070020-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "a04b0dce-c505-3e82-b6db-8c526c2c2dd6",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    },
+    {
+      "serviceProviderId": "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
+      "planId": "49316MN1070022",
+      "planName": "BlueAccess HSA Silver $2800 Plan 632",
+      "planDescription": "BlueAccess HSA Silver $2800 Plan 632",
+      "planDetails": {
+        "planType": "ppo",
+        "productId": "49316MN107",
+        "issuerStateCode": "MN",
+        "formularyId": "MNF002",
+        "links": [
+          {
+            "id": "24107e86-7ac5-3462-b4ca-39b310e887bc",
+            "title": "49316MN1070022-00_SBC.pdf",
+            "link": "s3://quoting.prod.prod.simon365.com/sbc/49316MN1070022/49316MN1070022-00_SBC.pdf",
+            "type": "DOCUMENT",
+            "subType": "DOCUMENT_SBC"
+          },
+          {
+            "id": "53f55a3a-97f3-361b-9dfb-b81d1ef5b83f",
+            "title": "BasicRX Small Group HSA",
+            "link": "https://www.bluecrossmn.com/basicrxsmallgrouphsa2020",
+            "type": "WEBSITE",
+            "subType": "LINK_PRESCRIPTION_FORMULARY"
+          }
+        ],
+        "levelOfCoverage": "silver",
+        "networkId": "MNN001",
+        "marketCoverageCode": "SHOP (Small Group)",
+        "serviceAreaId": "MNS00100"
+      },
+      "effectiveDate": "2020-01-01",
+      "expirationDate": "2020-12-31"
+    }
+  ]

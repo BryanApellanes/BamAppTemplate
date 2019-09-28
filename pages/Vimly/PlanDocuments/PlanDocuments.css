@@ -17,3 +17,7 @@
     width: 100%;
     height: 400px;
 }
+
+.pagination {
+    margin-top: 50px    !important;    
+}

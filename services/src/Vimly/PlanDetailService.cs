@@ -23,14 +23,35 @@ namespace Vimly.Plans
             Application.CsvFiles["planIds"].ReadAllText().DelimitSplit("\r\n", true).Each(s => uniqueIds.Add(s));
             return uniqueIds.Select(id => new {PlanId = id}).ToArray();
         }
-        public string[] GetPdfFilePaths()
+        public object[] GetPdfFilePaths()
         {
-            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => f.FullName).ToArray();
+            return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => new {FilePath = f.FullName}).ToArray();
         }
 
         public object[] GetPdfFileNames()
         {
             return Application.GetDataSubdirectory("pdf").GetFiles("*.pdf").Select(f => new {FileName = f.Name}).ToArray();
+        }
+
+        public object[] GetMappings(string fileName)
+        {
+            FileInfo mappingFile = Application.GetDataFile("csv", "Mappings", fileName);
+            string allText = mappingFile.ReadAllText();
+            return allText.DelimitSplit(new string[]{"\r", "\n"}, true).Select(line => 
+            {
+                if(!string.IsNullOrEmpty(line))
+                {
+                    string[] values = line.DelimitSplit(",", true);
+                    return new {DocumentName = values[0], PlanId = values[1], EffectiveDate = values[2]};
+                }
+                return null;
+            }).Where(o => o != null).ToArray();
+        }
+
+        public ProductLink[] GetFixedProductLinks()
+        {
+            FileInfo linkFile = Application.GetDataFile("json", "fixedLinks.json");
+            return linkFile.FromJsonFile<ProductLink[]>();
         }
     }
 }

@@ -2,14 +2,10 @@
 <html lang="en">
     <head>
         <title>Plan Documents</title>
-        <link rel="stylesheet" type="text/css" href="https://unpkg.com/mocha@4.0.1/mocha.css" />
-        <link rel="stylesheet" type="text/css" href="../css/datatables.min.css" />        
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css" /> -->
+        <link rel="stylesheet" type="text/css" href="/js/Datatables/datatables.min.css" />        
         <link rel="stylesheet" type="text/css" href="../../css/site.css" />
-        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
         <link rel="stylesheet" href="../../css/bootstrap/bootstrap.css" />
         <link rel="stylesheet" href="./PlanDocuments.css" />
-        <!--<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     </head>
     <body style="margin: 10px">
@@ -42,9 +38,7 @@
                         <legend>Documents</legend>
                         <table id="documentNames">
                             <thead>
-                                <tr>
-                                    <tr><th>Document</th></tr>
-                                </tr>                    
+                                <tr><th>Document</th></tr>                   
                             </thead>
                             <tbody> 
                                 <tr></tr>                   
@@ -61,11 +55,10 @@
                         <label class="plan-details-label" for="planYear">Plan Year</label><input type="text" id="planYear" placeholder="year" value="2020" />
                         <label class="plan-details-label" for="planMonth">Plan Month</label><input type="text" id="planMonth" placeholder="month" value="01" />
                         <input type="button" value="search" id="planLinksSearchButton" />
-
                         <table id="planLinks">
                             <thead>
                                 <tr>
-                                    <tr><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
+                                    <tr><th>Plan Id</th><th>Id (link id)</th><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
                                 </tr>                    
                             </thead>
                             <tbody> 
@@ -74,13 +67,15 @@
                         </table>
                     </fieldset>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-6">
                     <fieldset class="plan-details">
                         <legend>Mappings</legend>
                         <table id="planDocumentMappings">
                             <thead>
                                 <tr>
-                                    <tr><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
+                                    <tr><th>Pdf Name</th><th>Plan Id</th><th>Effective Date</th></tr>
                                 </tr>                    
                             </thead>
                             <tbody> 
@@ -103,6 +98,11 @@ _.each(planDocs.prop("planIds"), pid => {
                     </fieldset>
 
                     <button id="adHocScriptRunButton">Run</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <button id="fixStuffButton">Fix stuff!</button>
                 </div>
             </div>
             <div class="row">
