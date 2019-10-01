@@ -3,8 +3,9 @@ var findADentistLinkManager = (function(){
         fs = require("fs"),
         path = require("path"),
         colors = require("colors"),
-        xhr = require('../xhr')({lodash: _}),
-        threading = require('../threading'),
+        XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest,
+        xhr = require('../../../js/bam/system/xhr')({lodash: _}),
+        threading = require('../../../js/bam/system/threading'),
         serviceProviderId = "3d9c7c71-4860-496e-8880-bbbe0f830b4d",
         environments = require('../environments'),
         linkInfo = {
@@ -188,7 +189,7 @@ var findADentistLinkManager = (function(){
                     //var url = `https://quoting-api.prod.simon365.com/rates/api/v1/products/dental/3d9c7c71-4860-496e-8880-bbbe0f830b4d/plans/${planId.trim()}/info/links?effectiveDate=${effectiveYear}-${effectiveMonth}-01`;
                     var url = `${this.getRatesPath()}/products/dental/${serviceProviderId}/plans/${planId.trim()}/info/links?effectiveDate=${effectiveYear}-${effectiveMonth}-01`;
 
-                    xhr.post(productInfoLink, this.getAuthHeader(), url)
+                    xhr.post(JSON.stringify(productInfoLink), this.getAuthHeader(), url)
                         .then(r => {
                             var response = JSON.parse(r.responseText);
                             resolve(response);
@@ -255,7 +256,8 @@ var findADentistLinkManager = (function(){
             },
             getAuthHeader: function() {                
                 return {
-                    Authorization: `Bearer ${environments.getToken()}`
+                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJmNTY1Y2EzMi1kZWZhLTQzZGQtYjBjOC00ZGNjNzFlODVhYTMiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLnByb2Quc2ltb24zNjUuY29tIiwiaWF0IjoxNTU2NTY2OTczLCJuYmYiOjE1NTY1MzA5NzMsImV4cCI6MTU4ODEyMzg5OSwic3MiOm51bGwsInZlciI6MSwidHlwIjoiU0VSVklDRV9BQ0NPVU5UIiwicm9sIjpbXX0.hc3wt7d27gow_lm3jnexFJg777C3y04oMqxphi18THw'
+                    //`Bearer ${environments.getToken()}`
                 }
             },
             getQuotingPath: function() {

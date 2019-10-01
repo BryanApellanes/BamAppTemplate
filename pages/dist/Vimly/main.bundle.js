@@ -35937,7 +35937,38 @@ $(document).ready(function(){
 
             });
             this.populateTable("#planDocumentMappings", () => planDetails.getMappings("MedicalJan012020.csv"));
-            this.populateTable("#fixPlanLinks", planDetails.getFixedProductLinks);
+            debugger;
+            this.populateTable("#fixPlanLinks", () => {
+                return new Promise((resolve, reject) => {
+                    planDetails.getFixedProductLinks()
+                        .then(data => {
+                            console.log(data);
+                            var munged = [];
+                            _.each(data, (datum) => {
+                                munged.push({
+                                    planId: datum.planId,
+                                    id: datum.link.id,
+                                    title: datum.link.title,
+                                    link: datum.link.link,
+                                    type: datum.link.type,
+                                    subType: datum.link.subType
+                                })
+                            });
+                            debugger;
+                            resolve(munged);
+                        })
+                        .catch(reject);
+                });
+            })
+            .then(fixedLinks => {
+                _this.getProp("fixPlanLinks_table").on("select", function(e, dt, type, indexes) {
+                    if(type === 'row'){
+                        console.log(indexes);
+                        var data = dt.rows(indexes);
+                        console.log(data);
+                    }
+                });              
+            });
         },
         ratesPath: function getRatesPath(){
             return envs.getRatesPath();

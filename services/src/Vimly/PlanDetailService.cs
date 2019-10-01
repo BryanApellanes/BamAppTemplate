@@ -48,10 +48,10 @@ namespace Vimly.Plans
             }).Where(o => o != null).ToArray();
         }
 
-        public ProductLink[] GetFixedProductLinks()
+        public ProductInfo[] GetFixedProductLinks()
         {
             FileInfo linkFile = Application.GetDataFile("json", "fixedLinks.json");
-            return linkFile.FromJsonFile<ProductLink[]>();
+            return linkFile.FromJsonFile<ProductInfo[]>();
         }
     }
 }

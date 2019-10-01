@@ -12,7 +12,9 @@ var planDocumentUploader = (function(){
         prodToken = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNWJlZTI3NS1iMWJlLTQwNGUtYjZlZS04MjlkNTI3YTlmZWMiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLnByb2Quc2ltb24zNjUuY29tIiwiaWF0IjoxNTY5MzM3MjQxLCJuYmYiOjE1NjkzMDEyNDEsImV4cCI6MTYwMDg5NDE2Nywic3MiOm51bGwsInZlciI6MSwibWt0IjoiIiwidHlwIjoiU0VSVklDRV9BQ0NPVU5UIiwicm9sIjpbXX0.K5foHE5crLJ1SvMiOu-jGGRklzBBf9U9J4Zp2O7yVeg",
         proj05Token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI1MzQxYTg5ZS01ODIzLTQzNWEtODMwMC1iODBiZTA0ZWU4ZDEiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLXByb2owNS5wcm9kLnNpbW9uMzY1LmNvbSIsImlhdCI6MTU0NzE0NzQzNCwibmJmIjoxNTQ3MTQ3MTM0LCJleHAiOjE1Nzg3MDQzNjAsInNzIjpudWxsLCJ2ZXIiOjEsInR5cCI6IlNFUlZJQ0VfQUNDT1VOVCIsInJvbCI6W119.CD7lRMXD8glyH8yZHfUKoNLQjcctcKi-YeJstgjvHbE",
         testToken = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0ZTQ4OGY5Mi03NDdkLTQ0YzMtOTUzMS1lYTc5NmQ1NDhkNzMiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLXRlc3QudGVzdC5zaW1vbjM2NS5jb20iLCJpYXQiOjE1NDcyMjY1NzgsIm5iZiI6MTU0NzIyNjI3OCwiZXhwIjoxNTc4NzgzNTA0LCJzcyI6bnVsbCwidmVyIjoxLCJ0eXAiOiJTRVJWSUNFX0FDQ09VTlQiLCJyb2wiOltdfQ.gkPc23_Osk31aI-Zpi9w_gkk5ZU4uZO0xATCVdOfajw",
-        localToken = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3NGM1ODZjMS0xY2I0LTQ0YmQtYjQ0MC01YzNhZmI0MTEwOWQiLCJzdWIiOiI3ODFkZTU2YS00Y2ViLTQxYjgtOGNkZS0yOTJlODU0YTZiYmIiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLXByb2owNS5wcm9kLnNpbW9uMzY1LmNvbSIsImlhdCI6MTU2ODgzNTE4MywibmJmIjoxNTY4ODM0ODgzLCJleHAiOjE2MDAzOTIxMDksInNzIjpudWxsLCJ2ZXIiOjEsIm1rdCI6IiIsInR5cCI6IlNFUlZJQ0VfQUNDT1VOVCIsInJvbCI6W119.bPjgOjA4yi-VubT_8t6tXJe7Pip-gl4rh2rKpqPHBvM",        
+        //localToken = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI3NGM1ODZjMS0xY2I0LTQ0YmQtYjQ0MC01YzNhZmI0MTEwOWQiLCJzdWIiOiI3ODFkZTU2YS00Y2ViLTQxYjgtOGNkZS0yOTJlODU0YTZiYmIiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLXByb2owNS5wcm9kLnNpbW9uMzY1LmNvbSIsImlhdCI6MTU2ODgzNTE4MywibmJmIjoxNTY4ODM0ODgzLCJleHAiOjE2MDAzOTIxMDksInNzIjpudWxsLCJ2ZXIiOjEsIm1rdCI6IiIsInR5cCI6IlNFUlZJQ0VfQUNDT1VOVCIsInJvbCI6W119.bPjgOjA4yi-VubT_8t6tXJe7Pip-gl4rh2rKpqPHBvM",        
+        // 
+        localToken = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJkNWJlZTI3NS1iMWJlLTQwNGUtYjZlZS04MjlkNTI3YTlmZWMiLCJzdWIiOiJiZWJjYWQ4NS02NDUxLTQwNmMtYTMzZi02OWM4MjlmZWI5MzAiLCJpc3MiOiJodHRwczovL3F1b3RpbmctYXBpLnByb2Quc2ltb24zNjUuY29tIiwiaWF0IjoxNTY5MzM3MjQxLCJuYmYiOjE1NjkzMDEyNDEsImV4cCI6MTYwMDg5NDE2Nywic3MiOm51bGwsInZlciI6MSwibWt0IjoiIiwidHlwIjoiU0VSVklDRV9BQ0NPVU5UIiwicm9sIjpbXX0.K5foHE5crLJ1SvMiOu-jGGRklzBBf9U9J4Zp2O7yVeg",
         authToken = localToken,
         tokens = {
             proj05: proj05Token,
@@ -136,7 +138,7 @@ var planDocumentUploader = (function(){
             }
             var authToken = this.getAuthorizationToken();
             return new Promise((resolve, reject) => {
-                var postUrl = `${quotingPath}/files/${serviceProviderId}/${docType}?planId=${planId}&effectiveDate=${effectiveDate}`;
+                var postUrl = `${quotingPath}/files/${serviceProviderId}/${docType}?planId=${planId}&effectiveDate=${effectiveDate}&updateLink=True`;
                 var parameters = {
                     docType: docType,
                     filePath: filePath,
