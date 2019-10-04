@@ -10,5 +10,6 @@ window.obj = require('../../js/bam/data/objToArray');
 
 window.vimly = require('./vimly.js');
 window.environments = require('./environments.js');
+window.effectiveDate = require('./effectiveDate.js');
 
 require('./PlanDocuments/PlanDocuments.js');

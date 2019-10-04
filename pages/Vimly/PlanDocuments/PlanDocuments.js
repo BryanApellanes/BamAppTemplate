@@ -19,6 +19,12 @@ $(document).ready(function(){
             }
             return this.getProp(name);
         },
+        dataTable: function(tableName){
+            return this.prop(`${tableName}_table`);
+        },
+        deselect: function(tableName){
+            this.dataTable(tableName).rows().deselect();
+        },
         populateTable: function(tableId, dataPromise){
             return new Promise((resolve, reject) =>
             {
@@ -41,15 +47,23 @@ $(document).ready(function(){
                             for(var prop in data[0]){
                                 columns.push({title: prop});
                             }
+                        
+                            var arrayOfArrays = [];
+                            _.each(data, item => arrayOfArrays.push(obj.toArray(item))); // obj is `require`d by main.js
+                            _this.prop(`${tableName}_data`, data);
+                            var existingTable = _this.prop(`${tableName}_table`);
+                            if(existingTable){
+                                existingTable.destroy();
+                            }
+                            
+                            _this.prop(`${tableName}_table`, $(tableId).DataTable({
+                                select: {
+                                    style: 'single'
+                                },
+                                data: arrayOfArrays,
+                                columns: columns
+                            }));
                         }
-                        var arrayOfArrays = [];
-                        _.each(data, item => arrayOfArrays.push(obj.toArray(item)));
-                        _this.setProp(`${tableName}_data`, data);
-                        _this.setProp(`${tableName}_table`, $(tableId).DataTable({
-                            select: true,
-                            data: arrayOfArrays,
-                            columns: columns
-                        }))
                         resolve(data);
                     })
                     .catch(reject);
@@ -57,43 +71,32 @@ $(document).ready(function(){
         },
         load: function(){
             var _this = this;
-            this.populateTable("#documentNames", planDetails.getPdfFileNames);
-            this.populateTable("#planIds", planDetails.getPlanIds).then(function(){
+            return new Promise((resolve, reject) => {
+                try {
+                    var promises = [];
+                    promises.push(this.populateTable("#documents", planDetails.getPdfFileNames));
+                    promises.push(this.populateTable("#plans", planDetails.getPlanIds));
+                    promises.push(this.populateTable("#links", () => Promise.resolve([{"Id": "", "Plan Id": "", "Effective Date": "", "Title": "", "Link Type": "", "Storage Location": ""}])));
+                    Promise.all(promises).then(results => resolve(_this));
+                } catch(e) {
+                    reject(e);
+                }
+            });
+        },
+        onRowSelected: function(tableName, dataHandler) {
+            var _this = this,
+                tblName = tableName;
 
-            });
-            this.populateTable("#planDocumentMappings", () => planDetails.getMappings("MedicalJan012020.csv"));
-            debugger;
-            this.populateTable("#fixPlanLinks", () => {
-                return new Promise((resolve, reject) => {
-                    planDetails.getFixedProductLinks()
-                        .then(data => {
-                            console.log(data);
-                            var munged = [];
-                            _.each(data, (datum) => {
-                                munged.push({
-                                    planId: datum.planId,
-                                    id: datum.link.id,
-                                    title: datum.link.title,
-                                    link: datum.link.link,
-                                    type: datum.link.type,
-                                    subType: datum.link.subType
-                                })
-                            });
-                            debugger;
-                            resolve(munged);
-                        })
-                        .catch(reject);
-                });
-            })
-            .then(fixedLinks => {
-                _this.getProp("fixPlanLinks_table").on("select", function(e, dt, type, indexes) {
-                    if(type === 'row'){
-                        console.log(indexes);
-                        var data = dt.rows(indexes);
-                        console.log(data);
+            if(!_.isFunction(dataHandler)){
+                dataHandler = (dataArray) => {};
+            }
+            this.dataTable(tblName)
+                .on("select", function(ev, dt, type, indexes) {
+                    if(type === 'row') {
+                        var data = dt.rows(indexes).data();
+                        dataHandler(data);
                     }
-                });              
-            });
+                });
         },
         ratesPath: function getRatesPath(){
             return envs.getRatesPath();
@@ -101,63 +104,72 @@ $(document).ready(function(){
         quotingPath: function getQuotingPath(){
             return envs.getQuotingPath();
         },
-        planId: function getPlanId(){
-            return $("#planId").val() || '';
+        planMonth: function(month){
+            return this.prop("planMonth", month);
         },
-        planYear: function getPlanYear(){
-            return $("#planYear").val() || '';
+        planIds: function(ids){
+            return this.prop("planIds", id);
         },
-        planMonth: function getPlanMonth(){
-            return $("#planMonth").val() || '';
+        planYear: function(year){
+            return this.prop("planYear", year);
         },
-        getSelectedPlanLinks: function(){
+        getPlanLinks: function(planId, planYear, planMonth) {
             return new Promise((resolve, reject) => {
-
                 var selectedEnv = $("#vimlyEnv option:selected").text(); 
                 envs.setCurrent(selectedEnv);                        
                 envs.getAuthorizationHeader(selectedEnv)
                     .then(header => {
                             var ratesPath = planDocumentsPage.ratesPath(),
-                            planId = planDocumentsPage.planId(),
-                            planYear = planDocumentsPage.planYear(),
-                            planMonth = planDocumentsPage.planMonth(),
-                            xhr = bam.xhr();
+                                xhr = bam.xhr(),
+                                effective = effectiveDate.from({year: planYear, month: planMonth});
             
-                        var getUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/${planYear}/${planId}/info/links?effectiveDate=${planYear}-${planMonth}-01`;
+                        var getUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/${effective.getYear()}/${planId}/info/links?effectiveDate=${effective.getYear()}-${effective.getMonth()}-01`;
                         
                         xhr.get(header, getUrl)
                             .then(x => {
-                                var data = JSON.parse(x.responseText);
-                                resolve(data);
+                                var links = JSON.parse(x.responseText);
+                                _.each(links, link => {
+                                    link.planId = planId,
+                                    link.planYear = planYear,
+                                    link.planMonth = planMonth
+                                });
+                                resolve(links);
                             })
                             .catch(reject);
                     })
                     .catch(reject);
-            });
+            })
         },
         getAuthorizationHeader: function(){
             var selectedEnv = $("#vimlyEnv option:selected").text(); 
             envs.setCurrent(selectedEnv);                        
             return envs.getAuthorizationHeader(selectedEnv);
-        },
-        updateFixedLinks: function(){
-            var oneLink = planDocumentsPage.prop("fixPlanLinks_data")[0];
-            var planId = oneLink.planId;
-            var link = _.clone(oneLink);
-            delete link.planId;
-            console.log(planId);
-            console.log(link);
-            this.updateLink(planId, link);
-        },        
-        updateLink: function(planId, link){
+        },  
+        /**
+         * Update the link for a specified plan.
+         * @param {*} planId The id of the plan whose link is updated.
+         * @param {*} effectiveDate Either a javascript date object representing the desired effective date or an object with month, date and year
+         * properties defined.  Values should be integers to ensure proper formatting.
+         * @param {*} link 
+         */    
+        updateLink: function(planId, effectiveDate, link){
+            /**
+             * shape of link
+            {
+                "id": "24107e86-7ac5-3462-b4ca-39b310e887bc",
+                "title": "49316MN1070022-00_SBC.pdf",
+                "link": "s3://quoting.prod.prod.simon365.com/sbc/2020-01-01/49316MN1070022/49316MN1070022-00_SBC.pdf",
+                "type": "DOCUMENT",
+                "subType": "DOCUMENT_SBC"
+            }
+             */
+            var effective = window.effectiveDate.from(effectiveDate);
             return new Promise((resolve, reject) => {
                 var ratesPath = planDocumentsPage.ratesPath();
-                //{{rates_path}}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/49316MN1070001/info/links/4fc6caf7-0794-3d4a-af5d-8554aa788dfe?effectiveDate=2020-01-01
-                var putUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/${planId}/info/links/${link.id}?effectiveDate=2020-01-01`;
+                var putUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/${planId}/info/links/${link.id}?effectiveDate=${effective.getYear()}-${effective.getMonth()}-${effective.getDate()}`;
                 this.getAuthorizationHeader()
                     .then(authHeader => {
-                        debugger;
-                        bam.xhr().put(link, authHeader, putUrl)
+                        bam.xhr().put(JSON.stringify(link), authHeader, putUrl)
                             .then(x => {
                                 var data = JSON.parse(x.responseText);
                                 resolve(data);
@@ -176,62 +188,97 @@ $(document).ready(function(){
             var currentOutput = $("#messages").val() || '';
             $("#messages").val((currentOutput + '\r\n' + msg).trim());
         },
-        runAdHocScript: function(){
-            var scriptText = $("#adHocScript").val();
-            eval(scriptText);
+        loadLinks: function(planId, planYear) {
+            var _this = this,
+                promises = [];
+            for(var planMonth = 1; planMonth <= 12; planMonth++) {
+                promises.push(_this.getPlanLinks(planId, planYear, planMonth));
+            }
+            Promise.all(promises).then(arrayOfArrays => {
+                var links = [];
+                _.each(arrayOfArrays, arr => _.each(arr, link => links.push(createLinkRowData(link))));
+                _this.populateTable("links", () => Promise.resolve(links));
+            });                        
         },
         attachEventHandlers: function(){
-            $("#planLinksSearchButton").off('click').on('click', function(){
-                planDocumentsPage.getSelectedPlanLinks();
-            });   
-            $("#adHocScriptRunButton").off('click').on('click', function(){
-                planDocumentsPage.runAdHocScript();
+            var _this = this,
+                linksColumns = ["id", "planId", "effectiveDate", "title", "linkType", "storageLocation"];
+            this.onRowSelected("plans", (planIds) => {
+                var planYear = $("#planYear").val() || 2020;
+                $("#planId").val(planIds[0]);
+                _this.loadLinks(planIds[0], planYear);
             });
-            $("#fixStuffButton").off('click').on('click', function(){
-                planDocumentsPage.updateFixedLinks();
+            this.onRowSelected("links", (cellValues) => {
+                var link = rowToObj(linksColumns, cellValues[0]);  
+                $("#linkId").val(link.id);            
+                $("#linkPlanId").val(link.planId);
+                $("#linkEffectiveDate").val(link.effectiveDate);
+                $("#linkTitle").val(link.title);
+                $("#linkType").val(link.linkType);
+                $("#linkStorageLocation").val(link.storageLocation);
             });
-        },
-        getLinkUpdateUrl: function(options){
-            var opts = _.extend({}, {
-                quotingPath: this.getQuotingPath(),
-                planId: DEFAULT_PLANID,
-
-            }, options);
-
+            $("#loadPlanLinksButton").off("click").on("click", function(){
+                var planId = $("#planId").val(),
+                    planYear = $("#planYear").val() || 2020;
+                _this.deselect("plans");
+                if(planId.trim() === '') {
+                    _this.printMessage("Please specify a plan id");
+                    $("#planId").focus();
+                    return;
+                }
+                _this.loadLinks(planId, planYear);
+            });
+            $("#updateLinkButton").off("click").on("click", function(){
+                var link = getLinkFromInput();
+                _this.updateLink($("#linkPlanId").val(), $("#linkEffectiveDate").val(), link);
+            });
         },
         test:function(msg){
             this.printMessage(msg);
-        },
-        getSbcPutTemplate: function(){
-            var propName = "sbcPutTemplate";
-            var sbcPutTemplate = this.prop(propName);
-            if(!sbcPutTemplate) {
-                var templateSource = $("#sbcLinkPutTemplate").val();
-                sbcPutTemplate = handlebars.compile(templateSource);
-                this.prop(propName, sbcPutTemplate);
-            }
-            return sbcPutTemplate;
-        },
-        renderSbcPutTemplate: function(model){
-            return this.getSbcPutTemplate()(model);
-        },
-        renderPutLinks: function(){
-            var selectedEnv = $("#vimlyEnv option:selected").text(); 
-            envs.setCurrent(selectedEnv);  
-            var quotingPath = envs.getQuotingPath();
-            _.each(planDocumentsPage.prop("planIds"), planId => {
-                var putUrl = this.renderSbcPutTemplate({
-                    quotingPath: quotingPath,
-                    planId: planId,
-                    effectiveYear: this.planYear(),
-                    effectiveMonth: this.planMonth()
-                })
-            });
         }
     }
 
-    planDocumentsPage.load();
-    planDocumentsPage.attachEventHandlers();
+    function createLinkRowData(link){
+        return {
+            "Link Id": link.id,
+            "Plan Id": link.planId,
+            "Effective": effectiveDate.from({year: link.planYear, month: link.planMonth, date: 1}).value(),
+            "Title": link.title,
+            "Type": link.subType,
+            "S3 Path": link.link
+        }
+    }
+
+    function rowToObj(columnNames, rowArray){
+        var result = {};
+        for(var i = 0; i < columnNames.length; i++){
+            result[columnNames[i]] = rowArray[i];
+        }
+        return result;
+    }
+
+    function getLinkFromInput(){
+        /**
+         *             {
+                "id": "24107e86-7ac5-3462-b4ca-39b310e887bc",
+                "title": "49316MN1070022-00_SBC.pdf",
+                "link": "s3://quoting.prod.prod.simon365.com/sbc/2020-01-01/49316MN1070022/49316MN1070022-00_SBC.pdf",
+                "type": "DOCUMENT",
+                "subType": "DOCUMENT_SBC"
+            }
+         */
+        return {
+            id: $("#linkId").val(),
+            title: $("#linkTitle").val(),
+            link: $("#linkStorageLocation").val(),
+            type: "DOCUMENT",
+            subType: $("#linkType").val()
+        }
+    }
+
+    planDocumentsPage
+        .load()
+        .then(() => planDocumentsPage.attachEventHandlers());
 
     window.planDocumentPage = planDocumentsPage;
     window.planDocs = planDocumentsPage;

@@ -1,0 +1,32 @@
+#linkId {
+    width: 100%
+}
+
+#linkPlanId {
+    width: 100%
+}
+
+#linkEffectiveDate {
+    width: 100%
+}
+
+#linkTitle {
+    width: 100%
+}
+
+#linkStorageLocation {
+    width: 100%
+}
+
+#sbcLinkPutTemplate {
+    width: 100%;
+}
+
+#messages {
+    width: 100%;
+    height: 400px;
+}
+
+.pagination {
+    margin-top: 50px    !important;    
+}

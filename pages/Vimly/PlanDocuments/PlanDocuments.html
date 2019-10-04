@@ -11,7 +11,7 @@
     <body style="margin: 10px">
         <select id="vimlyEnv">
             <option value="local">local</option>
-            <option value="proj05">proj05</option>
+            <option value="proj05" selected="selected">proj05</option>
             <option value="staging">staging</option>
             <option value="prod">prod</option>
         </select>
@@ -21,7 +21,7 @@
                 <div class="col-6">
                     <fieldset>
                         <legend>Plans</legend>
-                        <table id="planIds">
+                        <table id="plans">
                             <thead>
                                 <tr>
                                     <tr><th>PlanId</th></tr>
@@ -36,7 +36,7 @@
                 <div class="col-6">
                     <fieldset>
                         <legend>Documents</legend>
-                        <table id="documentNames">
+                        <table id="documents">
                             <thead>
                                 <tr><th>Document</th></tr>                   
                             </thead>
@@ -47,18 +47,23 @@
                     </fieldset>
                 </div>
             </div>
+<hr />
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
+                    <input type="text" id="planId" placeholder="Plan Id" />
+                    <input type="text" id="planYear" placeholder="Plan Year" value="2020" />
+                    <button id="loadPlanLinksButton" class="btn btn-primary">Load Plan Links</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
                     <fieldset class="plan-details">
-                        <legend>Fix Plan Links</legend>
-                        <label class="plan-details-label" for="planId">Plan Id</label><input type="text" id="planId" placeholder="planId" value="49316MN1070001" />
-                        <label class="plan-details-label" for="planYear">Plan Year</label><input type="text" id="planYear" placeholder="year" value="2020" />
-                        <label class="plan-details-label" for="planMonth">Plan Month</label><input type="text" id="planMonth" placeholder="month" value="01" />
-                        <input type="button" value="search" id="planLinksSearchButton" />
-                        <table id="fixPlanLinks">
+                        <legend>Links</legend>
+                        <table id="links">
                             <thead>
                                 <tr>
-                                    <tr><th>Plan Id</th><th>Id (link id)</th><th>Title</th><th>Link</th><th>Type</th><th>SubType</th></tr>
+                                    <tr><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th></tr>
                                 </tr>                    
                             </thead>
                             <tbody> 
@@ -68,48 +73,36 @@
                     </fieldset>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <fieldset class="plan-details">
-                        <legend>Mappings</legend>
-                        <table id="planDocumentMappings">
-                            <thead>
-                                <tr>
-                                    <tr><th>Pdf Name</th><th>Plan Id</th><th>Effective Date</th></tr>
-                                </tr>                    
-                            </thead>
-                            <tbody> 
-                                <tr></tr>                   
-                            </tbody>
-                        </table>
-                    </fieldset>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <fieldset>
-                        <legend>Script Editor</legend>
 
-                        <textarea id="adHocScript">
-_.each(planDocs.prop("planIds"), pid => {
-    planDocs.printMessage(pid, true);
-});
-                        </textarea>
-                    </fieldset>
+            <div class="row">
+                <div class="col-12">
+                    <fieldset id="editLinkDetails">
+                        <label for="linkId">Link Id</label>
+                        <input type="text" id="linkId" placeholder="Id" readonly />
 
-                    <button id="adHocScriptRunButton">Run</button>
+                        <label for="linkPlanId">Plan Id</label>
+                        <input type="text" id="linkPlanId" placeholder="Plan Id"/>
+
+                        <label for="linkEffectiveDate">Effective Date</label>
+                        <input type="text" id="linkEffectiveDate" placeholder="Effective Date" />
+
+                        <label for="linkTitle">Title</label>
+                        <input type="text" id="linkTitle" placeholder="Title" readonly />
+
+                        <label for="linkType">Link Type</label>
+                        <select id="linkType">
+                            <option value="DOCUMENT_SBC" selected="selected">SBC</option>
+                            <option value="DOCUMENT_BENEFIT_GRID">Benefits Grid</option>
+                        </select><br />
+
+                        <label for="linkStorageLocation">Storage Location</label>
+                        <input type="text" id="linkStorageLocation" placeholder="Storage Location" /><br />
+
+                        <button id="updateLinkButton" class="btn btn-primary">Update Link</button>
+                    </fieldset>                    
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <button id="fixStuffButton">Fix stuff!</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <input id="sbcLinkPutTemplate" type="text" value="{{quotingPath}}/files/3d9c7c71-4860-496e-8880-bbbe0f830b4d/sbc-link?planId={{planId}}&effectiveDate={{effectiveYear}}-{{effectiveMonth}}-01&linkTitle={{fileName}}&storageLocation=s3://quoting.prod.prod.simon365.com/sbc/{{effectiveYear}}-{{effectiveMonth}}-01/{{planId}}/{{fileName}}" />
-                </div>
-            </div>
+<hr />
             <div class="row">
                 <div class="col-12">
                     <fieldset>

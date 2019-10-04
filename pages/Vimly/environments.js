@@ -3,12 +3,14 @@ var environments = (function(){
 
     var quotingPaths = {
             proj05: "https://quoting-api-proj05.prod.simon365.com/quoting/api/v1",
+            staging: "https://quoting-api-staging.prod.simon365.com/quoting/api/v1",
             test: "https://quoting-api-test.test.simon365.com/quoting/api/v1",
             local: "http://localhost:2001/quoting/api/v1",
             prod: "https://quoting-api.prod.simon365.com/quoting/api/v1"
         },  
         ratesPaths = {
             proj05: "https://quoting-api-proj05.prod.simon365.com/rates/api/v1",
+            staging: "https://quoting-api-staging.prod.simon365.com/rates/api/v1",
             test: "https://quoting-api-test.test.simon365.com/rates/api/v1",
             local: "http://localhost:10080/rates/api/v1",
             prod: "https://quoting-api.prod.simon365.com/rates/api/v1"
