@@ -30,6 +30,7 @@
     "*Proxyables.dll"
   ],
   "ServiceReferences": [
+    "AWSSDK.S3",
     "System.Collections.dll",
     "System.Console.dll"
   ],
