@@ -5,8 +5,6 @@
   "Admin/tests",
   "Admin/PlanDocuments/metro4-grid-example",
   "Admin/PlanDocuments/PlanDocuments",
-  "Elements/head-metro4",
-  "Elements/head-common",
   "Vimly/main",
   "Vimly/tests",
   "Vimly/PlanLinks/planlinks",

@@ -36020,7 +36020,32 @@ $(document).ready(function(){
             var selectedEnv = $("#vimlyEnv option:selected").text(); 
             envs.setCurrent(selectedEnv);                        
             return envs.getAuthorizationHeader(selectedEnv);
-        },  
+        },
+        deleteLink: function(planId, effectiveDate, link){
+            /**
+             * shape of link
+            {
+                "id": "24107e86-7ac5-3462-b4ca-39b310e887bc",
+                "title": "49316MN1070022-00_SBC.pdf",
+                "link": "s3://quoting.prod.prod.simon365.com/sbc/2020-01-01/49316MN1070022/49316MN1070022-00_SBC.pdf",
+                "type": "DOCUMENT",
+                "subType": "DOCUMENT_SBC"
+            }
+             */
+            var effective = window.effectiveDate.from(effectiveDate);
+            return new Promise((resolve, reject) => {
+                var ratesPath = planDocumentsPage.ratesPath();
+                var deleteUrl = `${ratesPath}/products/medical/plans/3d9c7c71-4860-496e-8880-bbbe0f830b4d/2020/${planId}/info/links/${link.id}?effectiveDate=${effective.getYear()}-${effective.getMonth()}-${effective.getDate()}`;
+                this.getAuthorizationHeader()
+                    .then(authHeader => {
+                        bam.xhr().delete(authHeader, deleteUrl)
+                            .then(x => {
+                                resolve(x);
+                            })
+                            .catch(reject);
+                    })
+            });
+        },
         /**
          * Update the link for a specified plan.
          * @param {*} planId The id of the plan whose link is updated.
@@ -36107,6 +36132,14 @@ $(document).ready(function(){
             $("#updateLinkButton").off("click").on("click", function(){
                 var link = getLinkFromInput();
                 _this.updateLink($("#linkPlanId").val(), $("#linkEffectiveDate").val(), link);
+            });
+            $("#deleteLinkButton").off("click").on("click", function(){
+                var link = getLinkFromInput(),
+                    planId = $("#linkPlanId").val(),
+                    planYear = $("#planYear").val() || 2020;
+
+                _this.deleteLink(planId, $("#linkEffectiveDate").val(), link)
+                        .then(() => _this.loadLinks(planId, planYear));                
             });
         },
         test:function(msg){

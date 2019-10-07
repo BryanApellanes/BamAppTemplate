@@ -1,7 +1,7 @@
 {
-  "ProcessId": 97237,
-  "CommandLineArgs": "/Users/bapellanes/src/BamFrameworkCore/Bam.Net/_tools.core/bamweb/bin/Debug/netcoreapp2.2/bamweb.dll /S /content:/opt/bam/content /verbose /apps:bamapp,bamapps",
-  "MainExe": "/usr/local/share/dotnet/dotnet",
+  "ProcessId": 20912,
+  "CommandLineArgs": "/Users/bapellanes/src/BamFrameworkCore/BamAppServer/apps/bamapp/bin/bamweb/bamweb.dll /S /content:/opt/bam/content /verbose /apps:bamapp",
+  "MainExe": "/Users/bapellanes/src/BamFrameworkCore/BamAppServer/apps/bamapp/bin/bamweb/bamweb",
   "ProcessMode": {
     "Mode": "Dev"
   }
