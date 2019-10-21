@@ -36545,6 +36545,9 @@ if(typeof window !== 'undefined'){
             return true;
         },
         setCurrent: function(env){    
+            if(env === ""){
+                env = "proj05";
+            }
             if(!this.isValidEnv(env)) {
                 throw new Error(`Invalid env ${env}`);
             }        
