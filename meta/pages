@@ -1,10 +1,6 @@
 [
   "start",
   "tests",
-  "Admin/main",
-  "Admin/tests",
-  "Admin/PlanDocuments/metro4-grid-example",
-  "Admin/PlanDocuments/PlanDocuments",
   "Vimly/main",
   "Vimly/tests",
   "Vimly/PlanLinks/planlinks",

@@ -11,11 +11,11 @@ else
 
 # browserifys the 'main.js' of the specified section then starts the bamweb server
 
-STARTPAGE=$1
+SECTION=$1
 
-rm pages/dist/$STARTPAGE/main.bundle.js 
+rm pages/dist/$SECTION/main.bundle.js 
 
-npx browserify pages/$STARTPAGE/main.js -o pages/dist/$STARTPAGE/main.bundle.js 
+npx browserify pages/$SECTION/main.js -o pages/dist/$SECTION/main.bundle.js 
 
 # todo implement this as bam /serve:appName
 

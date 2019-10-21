@@ -1,6 +1,6 @@
 {
-  "Name": "bamapp",
-  "DisplayName": "Bamapp",
+  "Name": "admin",
+  "DisplayName": "admin",
   "ProcessMode": "Dev",
   "ServerConf": {
     "ServerKind": "Bam",
@@ -13,7 +13,7 @@
   },
   "Bindings": [
     {
-      "HostName": "bamapp",
+      "HostName": "admin",
       "Port": 8080,
       "Ssl": false
     }
