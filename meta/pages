@@ -8,6 +8,7 @@
   "Vimly/main",
   "Vimly/tests",
   "Vimly/PlanLinks/planlinks",
+  "Vimly/SERFF/SERFF",
   "Vimly/PlanDocuments/metro4-grid-example",
   "Vimly/PlanDocuments/PlanLinks",
   "Vimly/PlanDocuments/PlanDocuments-tests",

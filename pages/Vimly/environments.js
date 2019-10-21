@@ -1,4 +1,4 @@
-var environments = (function(){
+    var environments = (function(){
     var _ = require('lodash');
 
     var quotingPaths = {

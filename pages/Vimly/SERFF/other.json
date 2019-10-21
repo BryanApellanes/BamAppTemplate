@@ -1,0 +1,59 @@
+{
+    "serviceProviderId": "408354b8-6b15-4a7d-b6ac-bbf9fb9227c5",
+    "hiosId": "49316",
+    "effectiveYear": "2018",
+    "rulesFileList": [
+        {
+            "s3bucket": "rules-bucket",
+            "s3key": "rules-key"
+        }
+    ],
+    "ratesFileList": [
+        {
+            "effectiveDate": "2018-04-01",
+            "expirationDate": "2018-06-30",
+            "s3bucket": "rates-bucket",
+            "s3key": "rates-key"
+        }
+    ],
+    "plansFileList": [
+        {
+            "issuerStateCode": "MN",
+            "marketCoverageCode": "some-coverage-code",
+            "planRatesFrequency": "QUARTERLY",
+            "s3bucket": "info-bucket",
+            "s3key": "info-key"
+        }
+    ],
+    "crosswalkFileList": [
+        {
+            "s3bucket": "crosswalk-bucket",
+            "s3key": "crosswalk-key"
+        }
+    ],
+    "serviceAreaFileList": [
+        {
+            "issuerStateCode": "MN",
+            "s3bucket": "service-area-bucket",
+            "s3key": "service-area-key"
+        }
+    ],
+    "networksFileList": [
+        {
+            "s3bucket": "networks-bucket",
+            "s3key": "networks-key"
+        }
+    ],
+    "formularyFileList": [
+        {
+            "s3bucket": "formulary-bucket",
+            "s3key": "formulary-key"
+        }
+    ],
+    "costShareVarianceFileList": [
+        {
+            "s3bucket": "costsharevariance-bucket",
+            "s3key": "costsharevariance-key"
+        }
+    ]
+}

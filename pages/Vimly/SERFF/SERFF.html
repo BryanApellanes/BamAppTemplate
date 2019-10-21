@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>SERFF</title>
+        <link rel="stylesheet" type="text/css" href="../../css/site.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/datatables.min.css" />
+
+        <link rel="stylesheet" href="./SERFF.css" />
+    </head>
+    <body>
+            <h1>SERFF</h1>
+            <div id="main">
+                    <select id="vimlyEnv">
+                            <option value="local">local</option>
+                            <option value="proj05" selected="selected">proj05</option>
+                            <option value="staging">staging</option>
+                            <option value="prod">prod</option>
+                        </select>
+                
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <fieldset class="cost-share-variance-table">
+                                        <legend>Cost Share Variance Data</legend>
+                                        <table id="costShareVarianceTable">
+                                            <thead>
+                                                <tr>
+                                                    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+                                                </tr>                    
+                                            </thead>
+                                            <tbody> 
+                                                <tr></tr>                   
+                                            </tbody>
+                                        </table>
+                                        <button id="reloadButton">Reload</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12" id="costShareVarianceInputs">
+                                    <label>hiosPlanId</label><input type="text" name="hiosPlanId" /><br />
+                                    <label>planVariantMarketingName</label><input type="text" name="planVariantMarketingName" /><br />
+                                    <label>inNetworkIndividualDeductible</label><input type="text" name="inNetworkIndividualDeductible" /><br />
+                                    <label>inNetworkFamilyDeductible</label><input type="text" name="inNetworkFamilyDeductible" /><br />
+                                    <label>outOfNetworkIndividualDeductible</label><input type="text" name="outOfNetworkIndividualDeductible" /><br />
+                                    <label>outOfNetworkFamilyDeductible</label><input type="text" name="outOfNetworkFamilyDeductible" /><br />
+                                    <label>inNetworkIndividualMaxOutOfPocket</label><input type="text" name="inNetworkIndividualMaxOutOfPocket" /><br />
+                                    <label>inNetworkFamilyMaxOutOfPocket</label><input type="text" name="inNetworkFamilyMaxOutOfPocket" /><br />
+                                    <label>outOfNetworkIndividualMaxOutOfPocket</label><input type="text" name="outOfNetworkIndividualMaxOutOfPocket" /><br />
+                                    <label>outOfNetworkFamilyMaxOutOfPocket</label><input type="text" name="outOfNetworkFamilyMaxOutOfPocket" /><br />
+                                    <label>defaultCoinsurance</label><input type="text" name="defaultCoinsurance" /><br />
+                                    <label>coPaymentPCP</label><input type="text" name="coPaymentPCP" /><br />
+                                    <label>coPaymentOfficeVisit</label><input type="text" name="coPaymentOfficeVisit" /><br />
+                                    <label>hsaEligible</label><input type="text" name="hsaEligible" /><br />
+                                    <label>planId</label><input type="text" name="planId" /><br />
+                                    <label>planVariant</label><input type="text" name="planVariant" /><br />
+
+                                    <button id="updateButton">Update</button>  
+                                    <button id="deleteButton">Delete</button> 
+                                    <input type="text" id="effectiveYear" />
+                                </div>
+                            </div>
+                        </div>
+
+            </div>
+            <script 
+                src="https://code.jquery.com/jquery-3.4.1.js"
+                integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+                crossorigin="anonymous">
+            </script>
+            <script src="/dust.js"></script>  
+            <script src="/lodash.full.js"></script>
+            <script src="/dist/Vimly/main.bundle.js"></script>
+
+            <script src="/serviceproxy/proxies.js"></script>
+            <script src="/Datatables/datatables.min.js"></script>
+
+            <span id="end-body">
+
+            </span>
+    </body>
+</html>

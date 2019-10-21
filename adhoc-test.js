@@ -8,5 +8,3 @@ xhr.get({
         .then(data=> {
             console.log(JSON.stringify(data));
         })
-
-// testing change again and again

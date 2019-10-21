@@ -1,0 +1,104 @@
+WorksheetNames:
+- Cost Share Variances 1
+- Cost Share Variances 2
+StartRow: 4
+Columns:
+- ColumnName: A
+  Header: HIOSPlanID
+  DisplayHeader: HIOS Plan ID
+- ColumnIndex: 1
+  ColumnName: B
+  Header: PlanVariantMarketingName
+  DisplayHeader: Plan Variant Marketing Name
+- ColumnIndex: 6
+  ColumnName: G
+  Header: IsMedicalAndDrugDeductibleIntegrated
+  DisplayHeader: Is Medical And Drug Deductible Integrated
+- ColumnIndex: 67
+  ColumnName: BP
+  Header: InNetworkIndividualCombinedMedicalAndDrugEHBDeductible
+  DisplayHeader: Combined Medical and Drug EHB Deductible - In Network - Individual
+- ColumnIndex: 68
+  ColumnName: BQ
+  Header: InNetworkFamilyCombinedMedicalAndDrugEHBDeductible
+  DisplayHeader: Combined Medical and Drug EHB Deductible - In Network - Family
+- ColumnIndex: 73
+  ColumnName: BV
+  Header: OutOfNetworkIndividualCombinedMedicalAndDrugEHBDeductible
+  DisplayHeader: Combined Medical and Drug EHB Deductible - Out of Network - Individual
+- ColumnIndex: 74
+  ColumnName: BW
+  Header: OutOfNetworkFamilyCombinedMedicalAndDrugEHBDeductible
+  DisplayHeader: Combined Medical and Drug EHB Deductible - Out of Network - Family
+- ColumnIndex: 47
+  ColumnName: AV
+  Header: InNetworkIndividualMedicalEHBDeductible
+  DisplayHeader: Medical EHB Deductible - In Network - Individual
+- ColumnIndex: 48
+  ColumnName: AW
+  Header: InNetworkFamilyMedicalEHBDeductible
+  DisplayHeader: Medical EHB Deductible - In Network - Family
+- ColumnIndex: 53
+  ColumnName: BB
+  Header: OutOfNetworkIndividualMedicalEHBDeductible
+  DisplayHeader: Medical EHB Deductible - Out of Network - Individual
+- ColumnIndex: 54
+  ColumnName: BC
+  Header: OutOfNetworkFamilyMedicalEHBDeductible
+  DisplayHeader: Medical EHB Deductible - Out of Network - Family
+- ColumnIndex: 7
+  ColumnName: H
+  Header: IsMedicalAndDrugMaximumOutOfPocketIntegrated
+  DisplayHeader: Is Medical And Drug Maximum Out of Pocket Integrated
+- ColumnIndex: 39
+  ColumnName: AN
+  Header: InNetworkIndividualMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical and Drug EHB Benefits - In Network - Individual
+- ColumnIndex: 40
+  ColumnName: AO
+  Header: InNetworkIndividualMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical and Drug EHB Benefits - In Network - Family
+- ColumnIndex: 43
+  ColumnName: AR
+  Header: OutOfNetworkIndividualMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical and Drug EHB Benefits - Out of Network - Individual
+- ColumnIndex: 44
+  ColumnName: AS
+  Header: OutOfNetworkFamilyMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical and Drug EHB Benefits - Out of Network - Family
+- ColumnIndex: 23
+  ColumnName: X
+  Header: InNetworkIndividualMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical EHB Benefits - In Network - Individual
+- ColumnIndex: 24
+  ColumnName: Y
+  Header: InNetworkFamilyMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical EHB Benefits - In Network - Family
+- ColumnIndex: 27
+  ColumnName: AB
+  Header: OutOfNetworkIndividualMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical EHB Benefits - Out of Network - Individual
+- ColumnIndex: 28
+  ColumnName: AC
+  Header: OutOfNetworkFamilyMaximumOutOfPocketForMedicalAndDrugEHBBenefits
+  DisplayHeader: Maximum Out of Pocket for Medical EHB Benefits - Out of Network - Family
+- ColumnIndex: 49
+  ColumnName: AX
+  Header: InNetworkDefaultCoinsuranceMedicalEHBDeductible
+  DisplayHeader: Medical EHB Deductible - In Network - Default Coinsurance
+- ColumnIndex: 69
+  ColumnName: BR
+  Header: InNetworkIndividualCombinedMedicalAndDrugEHBDeductible
+  DisplayHeader: Combined Medical and Drug EHB Deductible - In Network - Individual
+- ColumnIndex: 113
+  ColumnName: DJ
+  Header: InNetworkTier1PrimaryCareVisitToTreatAnInjuryOrIllness
+  DisplayHeader: Primary Care Visit to Treat an Injury or Illness - Copay - In Network - Tier 1
+- ColumnIndex: 119
+  ColumnName: DP
+  Header: InNetworkTier1SpecialistVisitCopay
+  DisplayHeader: Specialist Visit - Copay - In Network - Tier 1
+- ColumnIndex: 77
+  ColumnName: BZ
+  Header: IsHSAEligible
+  DisplayHeader: Is HSA Eligible

@@ -13,3 +13,4 @@ window.environments = require('./environments.js');
 window.effectiveDate = require('./effectiveDate.js');
 
 require('./PlanDocuments/PlanDocuments.js');
+require('./SERFF/SERFF.js');

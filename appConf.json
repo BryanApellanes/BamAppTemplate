@@ -45,8 +45,8 @@
     "ApplicationName": "bamapp",
     "ApplicationNameResolverType": "Bam.Net.Configuration.DefaultConfigurationApplicationNameProvider, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
     "EmailComposerType": "Bam.Net.Messaging.NamedFormatEmailComposer, bam.net.core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "EmailTemplateDirectoryPath": "C:\\bam\\data\\Prod\\AppData\\bamweb\\EmailTemplates",
-    "SmtpSettingsVaultPath": "C:\\bam\\data\\Prod\\AppData\\bamweb\\SmtpSettings.vault.sqlite",
+    "EmailTemplateDirectoryPath": "~/.bam/data/Prod/AppData/bamweb/EmailTemplates",
+    "SmtpSettingsVaultPath": "~/.bam/data/Prod/AppData/bamweb/SmtpSettings.vault.sqlite",
     "SuppressMessages": false
   }
 }
