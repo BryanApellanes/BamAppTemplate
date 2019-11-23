@@ -1,7 +1,7 @@
 {
-  "ProcessId": 8569,
-  "CommandLineArgs": "/Users/bapellanes/src/vimly-admin/apps/admin/bin/bamweb/bamweb.dll /S /content:/opt/bam/content /verbose /apps:admin",
-  "MainExe": "/Users/bapellanes/src/vimly-admin/apps/admin/bin/bamweb/bamweb",
+  "ProcessId": 17596,
+  "CommandLineArgs": "/Users/bryan/.bam/toolkit/bin/bamweb.dll /S /content:/Users/bryan/.bam/content /verbose",
+  "MainExe": "/Users/bryan/.bam/toolkit/bin/bamweb",
   "ProcessMode": {
     "Mode": "Dev"
   }
