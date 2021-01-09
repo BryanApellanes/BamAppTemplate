@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "colors": "^1.3.3",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "xmlhttprequest": "^1.8.0"
   }
 }
