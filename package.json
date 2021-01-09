@@ -43,7 +43,7 @@
     "jsdom": "^15.1.1",
     "jszip": "^3.2.2",
     "location": "0.0.1",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "metro4": "^4.2.41",
     "navigator": "^1.0.1",
     "node-query": "^0.3.3",
