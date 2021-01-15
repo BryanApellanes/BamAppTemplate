@@ -1,2 +1,0 @@
-// MAIN
-require('./tests.js');
