@@ -5,10 +5,8 @@
   "main": "main.js",
   "scripts": {
     "test": "npx browserify Pages/modules/tests.js -o Pages/dist/tests.js && electron . /page:tests /dev",
-    "planlinks": "npx browserify Pages/planlinks.js -o Pages/dist/planlinks.js && electron . /page:planlinks",
     "experimental": "electron . /page:experimental",
     "browserify": "npx browserify Pages/Modules/index.js -o dist/index.js",
-    "testCaseMgmt": "npx browserify Pages/Vimly/CaseManagement/tests.js -o Pages/dist/Vimly/CaseManagement/tests.js && electron . /page:Vimly/CaseManagement/tests /dev",
     "open": "electron . "
   },
   "author": "Bryan Apellanes",
@@ -17,6 +15,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "electron": "^7.2.4",
+    "jasmine-spec-reporter": "^6.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8"
   },
@@ -37,7 +36,7 @@
     "download": "^7.1.0",
     "dust": "^0.3.0",
     "fs": "0.0.1-security",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.6",
     "jQuery": "^1.7.4",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
