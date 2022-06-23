@@ -39,7 +39,7 @@
     "handlebars": "^4.7.6",
     "jQuery": "^1.7.4",
     "jquery": "^3.4.1",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "jszip": "^3.2.2",
     "location": "0.0.1",
     "lodash": "^4.17.19",
